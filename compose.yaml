@@ -1,9 +1,47 @@
 services:
-  postgres:
-    image: 'postgres:latest'
+  # Service pour PostgreSQL
+  postgresdb:
+    image: postgres:latest
+    container_name: postgres-instaLite
     environment:
-      - 'POSTGRES_DB=mydatabase'
-      - 'POSTGRES_PASSWORD=secret'
-      - 'POSTGRES_USER=myuser'
+      POSTGRES_DB: insta-lite-db
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: 123
     ports:
-      - '5432'
+      - "5433:5432"  # Modifié pour éviter le conflit de port avec un autre projet
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - instaLite_network
+
+  # Service pour Tomcat avec votre application WAR
+  tomcat-app:
+    build: .
+    container_name: tomcat-instaLite
+    ports:
+      - "8089:8080"  # Exposer Tomcat sur le port 8089
+    networks:
+      - instaLite_network
+    depends_on:
+      - postgresdb  # Tomcat attend que PostgreSQL soit prêt avant de démarrer
+
+  # Service pour pgAdmin
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: pgadmin-instaLite
+    environment:
+      PGADMIN_DEFAULT_EMAIL: instalite@admin.com  # Modifier en fonction de vos préférences
+      PGADMIN_DEFAULT_PASSWORD: admin123  # Modifier en fonction de vos préférences
+    ports:
+      - "5050:80"  # Accédez à pgAdmin via le port 5050
+    networks:
+      - instaLite_network
+    depends_on:
+      - postgresdb  # pgAdmin attend que PostgreSQL soit prêt avant de démarrer
+
+networks:
+  instaLite_network:
+    driver: bridge
+
+volumes:
+  postgres_data:
