@@ -1,7 +1,6 @@
 package univ_rouen.fr.Insta_lite.util;
 
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 import univ_rouen.fr.Insta_lite.dtos.ImageDTO;
 import univ_rouen.fr.Insta_lite.models.AppUser;
 import univ_rouen.fr.Insta_lite.models.Image;

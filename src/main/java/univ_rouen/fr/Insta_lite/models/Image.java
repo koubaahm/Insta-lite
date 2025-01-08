@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import org.hibernate.validator.constraints.UniqueElements;
 import univ_rouen.fr.Insta_lite.enumeration.Visibility;
 
 @Entity
@@ -13,6 +14,7 @@ public class Image {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @UniqueElements
     private String title;
 
     @Column(nullable = false)
