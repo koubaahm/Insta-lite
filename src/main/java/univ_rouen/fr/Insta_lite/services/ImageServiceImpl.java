@@ -1,6 +1,7 @@
 package univ_rouen.fr.Insta_lite.services;
 
-
+import org.springframework.core.io.Resource;
+import org.springframework.core.io.FileSystemResource;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -9,6 +10,7 @@ import univ_rouen.fr.Insta_lite.models.Image;
 import univ_rouen.fr.Insta_lite.repository.ImageRepository;
 import univ_rouen.fr.Insta_lite.util.ImageMapper;
 
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -32,38 +34,33 @@ public class ImageServiceImpl implements ImageService {
     @Override
     public ImageDTO saveImage(MultipartFile file, ImageDTO imageDTO) {
         try {
-            // 1. Définir le chemin où le fichier sera sauvegardé dans le dossier 'static/images'
             String uploadDir = "src/main/resources/static/images";
             Path filePath = Paths.get(uploadDir, file.getOriginalFilename());
 
-            // Créer le répertoire si nécessaire
             if (!Files.exists(filePath.getParent())) {
                 Files.createDirectories(filePath.getParent());
             }
 
-            // 2. Sauvegarder le fichier sur le disque
             Files.copy(file.getInputStream(), filePath);
 
-            // 3. Mettre à jour les informations spécifiques au fichier
-            imageDTO.setPath("/images/" + file.getOriginalFilename()); // URL publique
-            imageDTO.setSize(file.getSize()); // Taille du fichier en octets
-            imageDTO.setFormat(getFileExtension(file.getOriginalFilename())); // Format du fichier (extension)
-            imageDTO.setUploadedAt(LocalDateTime.now()); // Date et heure actuelles
 
-            // 4. Mapper les données DTO vers une entité Image
+            String title = getImageNameWithoutExtension(file.getOriginalFilename());
+            imageDTO.setTitle(title);
+
+            imageDTO.setPath("/images/" + file.getOriginalFilename());
+            imageDTO.setSize(file.getSize());
+            imageDTO.setFormat(getExtention(filePath));
+            imageDTO.setUploadedAt(LocalDateTime.now());
+
             Image image = imageMapper.convertToEntity(imageDTO);
 
-            // 5. Sauvegarder l'image dans la base de données
             Image savedImage = imageRepository.save(image);
 
-            // 6. Retourner le DTO de l'image sauvegardée
             return imageMapper.convertToDto(savedImage);
         } catch (Exception e) {
             throw new RuntimeException("Erreur lors de l'upload de l'image", e);
         }
     }
-
-
 
 
     @Override
@@ -91,15 +88,63 @@ public class ImageServiceImpl implements ImageService {
 
     @Override
     public void deleteImageById(Long id) {
+        Image image = imageRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Image not found with id: " + id));
+
+
+        Path filePath = Paths.get("src/main/resources/static/images", image.getPath().replace("/images/", ""));
+
+        try {
+
+            if (Files.exists(filePath)) {
+                Files.delete(filePath);
+            } else {
+                throw new RuntimeException("Fichier non trouvé: " + filePath);
+            }
+        } catch (IOException e) {
+            throw new RuntimeException("Failed to delete file: " + image.getTitle(), e);
+        }
+
+
         imageRepository.deleteById(id);
     }
 
-    private String getFileExtension(String fileName) {
-        if (fileName == null || fileName.lastIndexOf(".") == -1) {
-            return "unknown";
+    @Override
+    public Resource getImageSource(String filename) {
+        try {
+
+            Path path = Paths.get("src/main/resources/static/images").resolve(filename);
+            Resource resource = new FileSystemResource(path);
+
+            if (!resource.exists()) {
+                throw new RuntimeException("Fichier non trouvé: " + filename);
+            }
+
+            return resource;
+
+        } catch (Exception e) {
+            throw new RuntimeException("Erreur lors du chargement de l'image: " + filename, e);
         }
-        return fileName.substring(fileName.lastIndexOf(".") + 1);
     }
+    @Override
+    public String getExtention(Path path) {
+        try {
+            String contentType = Files.probeContentType(path);
+            return contentType != null ? contentType : "application/octet-stream"; // valeur par défaut
+        } catch (Exception e) {
+            throw new RuntimeException("Erreur lors de la détection du type MIME", e);
+        }
+    }
+
+    public String getImageNameWithoutExtension(String fileName) {
+        int lastDotIndex = fileName.lastIndexOf(".");
+        if (lastDotIndex == -1) {
+            return fileName;
+        }
+        return fileName.substring(0, lastDotIndex);
+    }
+
+
 
 
 

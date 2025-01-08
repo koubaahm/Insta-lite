@@ -19,6 +19,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
 
+
 @RestController
 @RequestMapping("/api/images")
 public class ImageController {
@@ -44,12 +45,11 @@ public class ImageController {
 
     @PostMapping
     public ResponseEntity<ImageDTO> createImage(@RequestParam("file") MultipartFile file,
-                                                @RequestParam("title") String title,
                                                 @RequestParam("visibility") Visibility visibility,
                                                 @RequestParam("uploadedById") Long uploadedById) {
         // Créer un ImageDTO à partir des paramètres fournis
         ImageDTO imageDTO = new ImageDTO();
-        imageDTO.setTitle(title);
+        imageDTO.setTitle(file.getName());
         imageDTO.setVisibility(visibility);
         imageDTO.setUploadedById(uploadedById);
 
@@ -66,19 +66,11 @@ public class ImageController {
     @ResponseBody
     public ResponseEntity<Resource> getImage(@PathVariable String filename) {
         try {
-            // Chemin du fichier dans le dossier images
-            Path path = Paths.get("src/main/resources/static/images").resolve(filename);
-            Resource resource = new FileSystemResource(path);
 
-            if (!resource.exists()) {
-                throw new RuntimeException("Fichier non trouvé: " + filename);
-            }
+            Resource resource = imageService.getImageSource(filename);
 
-            // Détecter dynamiquement le type MIME du fichier
-            String contentType = Files.probeContentType(path);
-            if (contentType == null) {
-                contentType = "application/octet-stream"; // Valeur par défaut si le type MIME ne peut pas être déterminé
-            }
+            Path path = resource.getFile().toPath();
+            String contentType = imageService.getExtention(path);
 
             return ResponseEntity.ok()
                     .header(HttpHeaders.CONTENT_DISPOSITION, "inline; filename=\"" + filename + "\"") // Affichage dans le navigateur
@@ -89,7 +81,6 @@ public class ImageController {
             throw new RuntimeException("Erreur lors du chargement de l'image: " + filename, e);
         }
     }
-
 
 
 
@@ -105,4 +96,35 @@ public class ImageController {
         imageService.deleteImageById(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
+
+
+    @GetMapping("/download/{filename}")
+    @ResponseBody
+    public ResponseEntity<Resource> downloadImage(@PathVariable String filename) {
+        try {
+
+            Path path = Paths.get("src/main/resources/static/images").resolve(filename);
+            Resource resource = new FileSystemResource(path);
+
+            if (!resource.exists()) {
+                throw new RuntimeException("Fichier non trouvé: " + filename);
+            }
+
+            String contentType = Files.probeContentType(path);
+            if (contentType == null) {
+                contentType = "application/octet-stream";
+            }
+
+            return ResponseEntity.ok()
+                    .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + filename + "\"") // inline pour afficher , attachment pour telecharger
+                    .contentType(MediaType.parseMediaType(contentType))
+                    .body(resource);
+
+        } catch (Exception e) {
+            throw new RuntimeException("Erreur lors du chargement de l'image: " + filename, e);
+        }
+    }
+
+
+
 }

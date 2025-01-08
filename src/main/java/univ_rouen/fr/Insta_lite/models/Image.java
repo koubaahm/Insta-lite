@@ -14,7 +14,7 @@ public class Image {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @UniqueElements
+
     private String title;
 
     @Column(nullable = false)
