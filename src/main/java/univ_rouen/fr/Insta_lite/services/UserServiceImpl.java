@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 import univ_rouen.fr.Insta_lite.dtos.AppUserDTO;
 import univ_rouen.fr.Insta_lite.models.AppUser;
 import univ_rouen.fr.Insta_lite.repository.UserRepository;
-import univ_rouen.fr.Insta_lite.util.UserMapper;
+import univ_rouen.fr.Insta_lite.mapper.UserMapper;
 
 import java.util.List;
 import java.util.Optional;

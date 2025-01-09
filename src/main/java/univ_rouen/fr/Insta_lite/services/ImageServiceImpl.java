@@ -8,7 +8,7 @@ import org.springframework.web.multipart.MultipartFile;
 import univ_rouen.fr.Insta_lite.dtos.ImageDTO;
 import univ_rouen.fr.Insta_lite.models.Image;
 import univ_rouen.fr.Insta_lite.repository.ImageRepository;
-import univ_rouen.fr.Insta_lite.util.ImageMapper;
+import univ_rouen.fr.Insta_lite.mapper.ImageMapper;
 
 import java.io.IOException;
 import java.nio.file.Files;

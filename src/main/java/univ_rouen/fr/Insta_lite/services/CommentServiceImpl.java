@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 import univ_rouen.fr.Insta_lite.dtos.CommentDTO;
 import univ_rouen.fr.Insta_lite.models.Comment;
 import univ_rouen.fr.Insta_lite.repository.CommentRepository;
-import univ_rouen.fr.Insta_lite.util.CommentMapper;
+import univ_rouen.fr.Insta_lite.mapper.CommentMapper;
 
 import java.util.List;
 import java.util.Optional;

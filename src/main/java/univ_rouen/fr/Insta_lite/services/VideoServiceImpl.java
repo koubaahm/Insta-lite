@@ -6,7 +6,7 @@ import org.springframework.web.multipart.MultipartFile;
 import univ_rouen.fr.Insta_lite.dtos.VideoDTO;
 import univ_rouen.fr.Insta_lite.models.Video;
 import univ_rouen.fr.Insta_lite.repository.VideoRepository;
-import univ_rouen.fr.Insta_lite.util.VideoMapper;
+import univ_rouen.fr.Insta_lite.mapper.VideoMapper;
 import jakarta.persistence.EntityNotFoundException;
 import univ_rouen.fr.Insta_lite.util.VideoUtils;
 
