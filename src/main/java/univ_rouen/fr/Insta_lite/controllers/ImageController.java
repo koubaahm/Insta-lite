@@ -47,13 +47,13 @@ public class ImageController {
     public ResponseEntity<ImageDTO> createImage(@RequestParam("file") MultipartFile file,
                                                 @RequestParam("visibility") Visibility visibility,
                                                 @RequestParam("uploadedById") Long uploadedById) {
-        // Créer un ImageDTO à partir des paramètres fournis
+
         ImageDTO imageDTO = new ImageDTO();
         imageDTO.setTitle(file.getName());
         imageDTO.setVisibility(visibility);
         imageDTO.setUploadedById(uploadedById);
 
-        // Appeler le service pour enregistrer l'image
+
         ImageDTO createdImage = imageService.saveImage(file, imageDTO);
 
         // Retourner la réponse avec l'image sauvegardée
@@ -73,7 +73,7 @@ public class ImageController {
             String contentType = imageService.getExtention(path);
 
             return ResponseEntity.ok()
-                    .header(HttpHeaders.CONTENT_DISPOSITION, "inline; filename=\"" + filename + "\"") // Affichage dans le navigateur
+                    .header(HttpHeaders.CONTENT_DISPOSITION, "inline; filename=\"" + filename + "\"") // inline pour afficher
                     .contentType(MediaType.parseMediaType(contentType))
                     .body(resource);
 
@@ -116,7 +116,7 @@ public class ImageController {
             }
 
             return ResponseEntity.ok()
-                    .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + filename + "\"") // inline pour afficher , attachment pour telecharger
+                    .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + filename + "\"") // attachment pour telecharger
                     .contentType(MediaType.parseMediaType(contentType))
                     .body(resource);
 

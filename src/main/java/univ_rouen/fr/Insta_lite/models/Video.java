@@ -25,7 +25,7 @@ public class Video {
 
     private String format;
 
-    private long duration;
+    private String duration;
 
     private LocalDateTime uploadedAt;
 
@@ -84,11 +84,11 @@ public class Video {
         this.format = format;
     }
 
-    public long getDuration() {
+    public String getDuration() {
         return duration;
     }
 
-    public void setDuration(long duration) {
+    public void setDuration(String duration) {
         this.duration = duration;
     }
 
