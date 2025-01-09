@@ -1,14 +1,15 @@
 package univ_rouen.fr.Insta_lite.mapper;
 
-import univ_rouen.fr.Insta_lite.dtos.AppUserDTO;
+import univ_rouen.fr.Insta_lite.dtos.AppUserRequestDTO;
+import univ_rouen.fr.Insta_lite.dtos.AppUserResponseDTO;
 import univ_rouen.fr.Insta_lite.models.AppUser;
 
 public interface UserMapper {
 
-    AppUserDTO toDTO(AppUser user);
+    AppUserResponseDTO toDTO(AppUser user);
 
-    AppUser toEntity(AppUserDTO dto);
+    AppUser toEntity(AppUserRequestDTO dto);
 
-    void updateEntityWithDto(AppUserDTO dto, AppUser user);
+    void updateEntityWithDto(AppUserRequestDTO dto, AppUser user);
 }
 

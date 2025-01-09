@@ -4,23 +4,24 @@ import univ_rouen.fr.Insta_lite.enumeration.AppRole;
 
 import java.util.List;
 
-public class AppUserDTO {
+public class AppUserResponseDTO {
 
+    private Long id;
     private String name;
     private String email;
     private String password;
     private AppRole role;
     private boolean isActive;
 
-    // Listes d'identifiants pour éviter les références circulaires
+    // pour éviter les références circulaires on utilise les id
     private List<Long> imageIds;
     private List<Long> videoIds;
     private List<Long> commentIds;
 
-    public AppUserDTO() {
-    }
 
-    public AppUserDTO(String name, String email,String password, AppRole role, boolean isActive, List<Long> imageIds, List<Long> videoIds, List<Long> commentIds) {
+
+    public AppUserResponseDTO(Long id,String name, String email, String password, AppRole role, boolean isActive, List<Long> imageIds, List<Long> videoIds, List<Long> commentIds) {
+        this.id = id;
         this.name = name;
         this.email = email;
         this.password = password;
@@ -30,6 +31,15 @@ public class AppUserDTO {
         this.videoIds = videoIds;
         this.commentIds = commentIds;
     }
+
+    public AppUserResponseDTO() {
+
+    }
+
+    public Long getId() {
+        return id;
+    }
+    public void setId(Long id) {}
 
     public String getName() {
         return name;

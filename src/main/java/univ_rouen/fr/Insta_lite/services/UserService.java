@@ -1,20 +1,21 @@
 package univ_rouen.fr.Insta_lite.services;
 
 
-import univ_rouen.fr.Insta_lite.dtos.AppUserDTO;
+import univ_rouen.fr.Insta_lite.dtos.AppUserRequestDTO;
+import univ_rouen.fr.Insta_lite.dtos.AppUserResponseDTO;
 
 import java.util.List;
 import java.util.Optional;
 
 public interface UserService {
 
-    AppUserDTO add(AppUserDTO userDTO);
-    AppUserDTO get(Long id);
-    AppUserDTO update(AppUserDTO userDTO, Long id);
+    AppUserResponseDTO add(AppUserRequestDTO userDTO);
+    AppUserResponseDTO get(Long id);
+    AppUserResponseDTO update(AppUserRequestDTO userDTO, Long id);
     void delete(Long id);
-    List<AppUserDTO> getAllUsers();
+    List<AppUserResponseDTO> getAllUsers();
 
-    Optional<AppUserDTO> findByEmail(String email);
+    Optional<AppUserResponseDTO> findByEmail(String email);
 
-    AppUserDTO updatePassword(String email, String newPassword);
+    AppUserResponseDTO updatePassword(String email, String newPassword);
 }

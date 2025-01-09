@@ -3,7 +3,8 @@ package univ_rouen.fr.Insta_lite.controllers;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import univ_rouen.fr.Insta_lite.dtos.AppUserDTO;
+import univ_rouen.fr.Insta_lite.dtos.AppUserRequestDTO;
+import univ_rouen.fr.Insta_lite.dtos.AppUserResponseDTO;
 import univ_rouen.fr.Insta_lite.services.UserService;
 
 import java.util.List;
@@ -19,14 +20,14 @@ public class UserController {
     }
 
     @PostMapping
-    public ResponseEntity<AppUserDTO> addUser(@RequestBody AppUserDTO userDTO) {
-        AppUserDTO appUser = userService.add(userDTO);
+    public ResponseEntity<AppUserResponseDTO> addUser(@RequestBody AppUserRequestDTO userDTO) {
+        AppUserResponseDTO appUser = userService.add(userDTO);
         return ResponseEntity.ok(appUser);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<AppUserDTO> updateUser(@PathVariable Long id, @RequestBody AppUserDTO userDTO) {
-        AppUserDTO appUser = userService.update(userDTO, id);
+    public ResponseEntity<AppUserResponseDTO> updateUser(@PathVariable Long id, @RequestBody AppUserRequestDTO userDTO) {
+        AppUserResponseDTO appUser = userService.update(userDTO, id);
         return ResponseEntity.ok(appUser);
     }
 
@@ -37,18 +38,18 @@ public class UserController {
     }
 
     @GetMapping
-    public ResponseEntity<List<AppUserDTO>> getAllUsers() {
+    public ResponseEntity<List<AppUserResponseDTO>> getAllUsers() {
         return ResponseEntity.ok(userService.getAllUsers());
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<AppUserDTO> getUser(@PathVariable Long id) {
+    public ResponseEntity<AppUserResponseDTO> getUser(@PathVariable Long id) {
         return ResponseEntity.ok(userService.get(id));
     }
 
     @PutMapping("/reset-password")
-    public ResponseEntity<AppUserDTO> resetPassword(@RequestParam String email, @RequestBody String newPassword) {
-        AppUserDTO updatedUser = userService.updatePassword(email, newPassword);
+    public ResponseEntity<AppUserResponseDTO> resetPassword(@RequestParam String email, @RequestBody String newPassword) {
+        AppUserResponseDTO updatedUser = userService.updatePassword(email, newPassword);
         if (updatedUser != null) {
             return ResponseEntity.ok(updatedUser);
         } else {

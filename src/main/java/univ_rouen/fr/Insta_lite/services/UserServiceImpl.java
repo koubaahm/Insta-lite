@@ -2,7 +2,8 @@ package univ_rouen.fr.Insta_lite.services;
 
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-import univ_rouen.fr.Insta_lite.dtos.AppUserDTO;
+import univ_rouen.fr.Insta_lite.dtos.AppUserRequestDTO;
+import univ_rouen.fr.Insta_lite.dtos.AppUserResponseDTO;
 import univ_rouen.fr.Insta_lite.models.AppUser;
 import univ_rouen.fr.Insta_lite.repository.UserRepository;
 import univ_rouen.fr.Insta_lite.mapper.UserMapper;
@@ -25,7 +26,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public AppUserDTO add(AppUserDTO userDTO) {
+    public AppUserResponseDTO add(AppUserRequestDTO userDTO) {
         AppUser user = userMapper.toEntity(userDTO);
         user.setPassword(passwordEncoder.encode(userDTO.getPassword()));
         user = userRepository.save(user);
@@ -33,13 +34,13 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public AppUserDTO get(Long id) {
+    public AppUserResponseDTO get(Long id) {
         AppUser user = userRepository.findById(id).orElseThrow(() -> new RuntimeException("User not found"));
         return userMapper.toDTO(user);
     }
 
     @Override
-    public AppUserDTO update(AppUserDTO userDTO, Long id) {
+    public AppUserResponseDTO update(AppUserRequestDTO userDTO, Long id) {
         AppUser user = userRepository.findById(id).orElseThrow(() -> new RuntimeException("User not found"));
         userMapper.updateEntityWithDto(userDTO, user);
         if (userDTO.getPassword() != null && !userDTO.getPassword().isEmpty()) {
@@ -55,19 +56,19 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<AppUserDTO> getAllUsers() {
+    public List<AppUserResponseDTO> getAllUsers() {
         List<AppUser> users = userRepository.findAll();
         return users.stream().map(userMapper::toDTO).collect(Collectors.toList());
     }
 
     @Override
-    public Optional<AppUserDTO> findByEmail(String email) {
+    public Optional<AppUserResponseDTO> findByEmail(String email) {
         Optional<AppUser> user = userRepository.findByEmail(email);
         return user.map(userMapper::toDTO);
     }
 
     @Override
-    public AppUserDTO updatePassword(String email, String newPassword) {
+    public AppUserResponseDTO updatePassword(String email, String newPassword) {
         AppUser user = userRepository.findByEmail(email).orElseThrow(() -> new RuntimeException("User not found"));
         user.setPassword(passwordEncoder.encode(newPassword));
         user = userRepository.save(user);

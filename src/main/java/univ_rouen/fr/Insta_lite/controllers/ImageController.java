@@ -56,7 +56,7 @@ public class ImageController {
 
         ImageDTO createdImage = imageService.saveImage(file, imageDTO);
 
-        // Retourner la réponse avec l'image sauvegardée
+
         return new ResponseEntity<>(createdImage, HttpStatus.CREATED);
     }
 

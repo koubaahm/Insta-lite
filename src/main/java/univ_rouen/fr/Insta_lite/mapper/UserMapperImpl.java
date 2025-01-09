@@ -1,7 +1,8 @@
 package univ_rouen.fr.Insta_lite.mapper;
 
 import org.springframework.stereotype.Component;
-import univ_rouen.fr.Insta_lite.dtos.AppUserDTO;
+import univ_rouen.fr.Insta_lite.dtos.AppUserRequestDTO;
+import univ_rouen.fr.Insta_lite.dtos.AppUserResponseDTO;
 import univ_rouen.fr.Insta_lite.models.AppUser;
 import univ_rouen.fr.Insta_lite.models.Comment;
 import univ_rouen.fr.Insta_lite.models.Image;
@@ -13,11 +14,11 @@ import java.util.stream.Collectors;
 public class UserMapperImpl implements UserMapper {
 
     @Override
-    public AppUserDTO toDTO(AppUser user) {
+    public AppUserResponseDTO toDTO(AppUser user) {
         if (user == null) {
             return null;
         }
-        AppUserDTO dto = new AppUserDTO();
+        AppUserResponseDTO dto = new AppUserResponseDTO();
         dto.setName(user.getName());
         dto.setEmail(user.getEmail());
         dto.setRole(user.getRole());
@@ -29,7 +30,7 @@ public class UserMapperImpl implements UserMapper {
     }
 
     @Override
-    public AppUser toEntity(AppUserDTO dto) {
+    public AppUser toEntity(AppUserRequestDTO dto) {
         if (dto == null) {
             return null;
         }
@@ -43,7 +44,7 @@ public class UserMapperImpl implements UserMapper {
     }
 
     @Override
-    public void updateEntityWithDto(AppUserDTO dto, AppUser user) {
+    public void updateEntityWithDto(AppUserRequestDTO dto, AppUser user) {
         if (dto == null || user == null) {
             return;
         }

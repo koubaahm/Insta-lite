@@ -27,6 +27,7 @@ public class VideoController {
         this.videoService = videoService;
     }
 
+    //charger la video
     @PostMapping
     public ResponseEntity<String> uploadVideo(@RequestParam("file") MultipartFile file, @RequestParam("title") String title,@RequestParam("uploadedById") Long uploadedById,@RequestParam("visibility") Visibility visibility) {
         try {
@@ -46,34 +47,33 @@ public class VideoController {
 
 
 
-    // Obtenir toutes les vidéos
     @GetMapping
     public List<VideoDTO> getAllVideos() {
         return videoService.getAllVideos();
     }
 
-    // Obtenir une vidéo par son ID
+
     @GetMapping("/{id}")
     public ResponseEntity<VideoDTO> getVideoById(@PathVariable Long id) {
         VideoDTO videoDTO = videoService.getVideoById(id);
         return ResponseEntity.ok(videoDTO);
     }
 
-    // Mettre à jour une vidéo
+
     @PutMapping("/{id}")
     public ResponseEntity<VideoDTO> updateVideo(@PathVariable Long id, @RequestBody VideoDTO videoDTO) {
         VideoDTO updatedVideo = videoService.updateVideo(videoDTO, id);
         return ResponseEntity.ok(updatedVideo);
     }
 
-    // Supprimer une vidéo
+
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteVideo(@PathVariable Long id) {
         videoService.deleteVideoById(id);
         return ResponseEntity.noContent().build();
     }
 
-    // Ouvrir la vidéo dans le navigateur
+    // ouvrir la vidéo dans le navigateur
     @GetMapping("/view/{filename}")
     public ResponseEntity<Resource> viewVideo(@PathVariable String filename) {
         try {
@@ -82,7 +82,7 @@ public class VideoController {
 
             if (resource.exists()) {
                 return ResponseEntity.ok()
-                        .header(HttpHeaders.CONTENT_TYPE, "video/mp4")  // Définir le type MIME, ajustez selon le type de vidéo
+                        .header(HttpHeaders.CONTENT_TYPE, "video/mp4")
                         .body(resource);
             } else {
                 return ResponseEntity.notFound().build();
@@ -92,7 +92,7 @@ public class VideoController {
         }
     }
 
-    // Télécharger une vidéo
+    // télécharger une vidéo
     @GetMapping("/download/{filename}")
     public ResponseEntity<Resource> downloadVideo(@PathVariable String filename) {
         try {
@@ -102,7 +102,7 @@ public class VideoController {
             if (resource.exists()) {
                 return ResponseEntity.ok()
                         .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + filename + "\"")
-                        .header(HttpHeaders.CONTENT_TYPE, "video/mp4")  // Définir le type MIME, ajustez selon le type de vidéo
+                        .header(HttpHeaders.CONTENT_TYPE, "video/mp4")
                         .body(resource);
             } else {
                 return ResponseEntity.notFound().build();
