@@ -1,13 +1,17 @@
 package univ_rouen.fr.Insta_lite.controllers;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
-import univ_rouen.fr.Insta_lite.dtos.VideoDTO;
+import univ_rouen.fr.Insta_lite.dtos.VideoRequestDTO;
+import univ_rouen.fr.Insta_lite.dtos.VideoResponseDTO;
 import univ_rouen.fr.Insta_lite.enumeration.Visibility;
 import univ_rouen.fr.Insta_lite.services.VideoServiceImpl;
 
@@ -21,63 +25,68 @@ import java.util.List;
 public class VideoController {
 
     private final VideoServiceImpl videoService;
+    @Value("${video.directory}")
+    private String videoDirectory;
 
     @Autowired
     public VideoController(VideoServiceImpl videoService) {
         this.videoService = videoService;
     }
 
-    //charger la video
+    @Operation(summary = "Charger une vidéo")
     @PostMapping
-    public ResponseEntity<String> uploadVideo(@RequestParam("file") MultipartFile file, @RequestParam("title") String title,@RequestParam("uploadedById") Long uploadedById,@RequestParam("visibility") Visibility visibility) {
+    public ResponseEntity<String> uploadVideo(
+            @RequestParam("file") MultipartFile file,
+            @RequestParam("title") String title,
+            @Parameter(description = "id de l'utilisateur qui télécharge la vidéo", required = true)
+            @RequestParam("uploadedById") Long uploadedById,
+            @Parameter(description = "Visibilité de la vidéo", required = true)
+            @RequestParam("visibility") Visibility visibility) {
         try {
-            VideoDTO videoDTO = new VideoDTO();
+            VideoRequestDTO videoDTO = new VideoRequestDTO();
             videoDTO.setTitle(title);
             videoDTO.setUploadedById(uploadedById);
             videoDTO.setVisibility(visibility);
             videoService.saveVideo(file, videoDTO);
 
-
-            return ResponseEntity.ok("Vidéo téléchargée avec succès.");
+            return ResponseEntity.ok("vidéo téléchargée avec succès.");
         } catch (Exception e) {
-
-            return ResponseEntity.status(500).body("Erreur lors du téléchargement de la vidéo : " + e.getMessage());
+            return ResponseEntity.status(500).body("erreur lors du téléchargement de la vidéo : " + e.getMessage());
         }
     }
 
-
-
+    @Operation(summary = "retourne une liste de toutes les vidéos disponibles.")
     @GetMapping
-    public List<VideoDTO> getAllVideos() {
+    public List<VideoResponseDTO> getAllVideos() {
         return videoService.getAllVideos();
     }
 
-
+    @Operation(summary = "récupérer une vidéo par son id", description = "retourne les détails d'une vidéo")
     @GetMapping("/{id}")
-    public ResponseEntity<VideoDTO> getVideoById(@PathVariable Long id) {
-        VideoDTO videoDTO = videoService.getVideoById(id);
+    public ResponseEntity<VideoResponseDTO> getVideoById(@PathVariable Long id) {
+        VideoResponseDTO videoDTO = videoService.getVideoById(id);
         return ResponseEntity.ok(videoDTO);
     }
 
-
+    @Operation(summary = "update une vidéo")
     @PutMapping("/{id}")
-    public ResponseEntity<VideoDTO> updateVideo(@PathVariable Long id, @RequestBody VideoDTO videoDTO) {
-        VideoDTO updatedVideo = videoService.updateVideo(videoDTO, id);
+    public ResponseEntity<VideoResponseDTO> updateVideo(@PathVariable Long id, @RequestBody VideoRequestDTO videoDTO) {
+        VideoResponseDTO updatedVideo = videoService.updateVideo(videoDTO, id);
         return ResponseEntity.ok(updatedVideo);
     }
 
-
+    @Operation(summary = "supprimer une vidéo")
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteVideo(@PathVariable Long id) {
         videoService.deleteVideoById(id);
         return ResponseEntity.noContent().build();
     }
 
-    // ouvrir la vidéo dans le navigateur
+    @Operation(summary = "afficher une vidéo dans le navigateur")
     @GetMapping("/view/{filename}")
     public ResponseEntity<Resource> viewVideo(@PathVariable String filename) {
         try {
-            Path path = Paths.get("src/main/resources/static/videos").resolve(filename);
+            Path path = Paths.get(videoDirectory).resolve(filename);
             Resource resource = new UrlResource(path.toUri());
 
             if (resource.exists()) {
@@ -92,11 +101,11 @@ public class VideoController {
         }
     }
 
-    // télécharger une vidéo
+    @Operation(summary = "télécharger une vidéo", description = "permet de télécharger une vidéo en fournissant son nom de fichier.")
     @GetMapping("/download/{filename}")
     public ResponseEntity<Resource> downloadVideo(@PathVariable String filename) {
         try {
-            Path path = Paths.get("src/main/resources/static/videos").resolve(filename);
+            Path path = Paths.get(videoDirectory).resolve(filename);
             Resource resource = new UrlResource(path.toUri());
 
             if (resource.exists()) {

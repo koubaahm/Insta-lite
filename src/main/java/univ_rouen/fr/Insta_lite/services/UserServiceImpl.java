@@ -74,4 +74,10 @@ public class UserServiceImpl implements UserService {
         user = userRepository.save(user);
         return userMapper.toDTO(user);
     }
+    @Override
+    public Long getIdByEmail(String email) {
+        Optional<AppUser> user = userRepository.findByEmail(email);
+        return user.map(AppUser::getId).orElseThrow(() -> new RuntimeException("User not found"));
+
+    }
 }

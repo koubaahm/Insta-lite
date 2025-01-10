@@ -2,23 +2,33 @@ package univ_rouen.fr.Insta_lite.dtos;
 
 import java.time.LocalDateTime;
 
-public class CommentDTO {
 
+public class CommentResponseDTO {
+    private Long id;
     private String content;
     private LocalDateTime createdAt;
     private Long createdById;
     private Long imageId;
     private Long videoId;
 
-    public CommentDTO() {
+    public CommentResponseDTO() {
     }
 
-    public CommentDTO(String content, LocalDateTime createdAt, Long createdById, Long imageId, Long videoId) {
+    public CommentResponseDTO(Long id, String content, LocalDateTime createdAt, Long createdById, Long imageId, Long videoId) {
+        this.id = id;
         this.content = content;
         this.createdAt = createdAt;
         this.createdById = createdById;
         this.imageId = imageId;
         this.videoId = videoId;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getContent() {

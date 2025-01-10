@@ -1,9 +1,11 @@
 package univ_rouen.fr.Insta_lite.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
-import univ_rouen.fr.Insta_lite.dtos.VideoDTO;
+import univ_rouen.fr.Insta_lite.dtos.VideoRequestDTO;
+import univ_rouen.fr.Insta_lite.dtos.VideoResponseDTO;
 import univ_rouen.fr.Insta_lite.models.Video;
 import univ_rouen.fr.Insta_lite.repository.VideoRepository;
 import univ_rouen.fr.Insta_lite.mapper.VideoMapper;
@@ -23,6 +25,8 @@ public class VideoServiceImpl implements VideoService {
 
     private final VideoRepository videoRepository;
     private final VideoMapper videoMapper;
+    @Value("${video.directory}")
+    private String videoDirectory;
 
     @Autowired
     public VideoServiceImpl(VideoRepository videoRepository, VideoMapper videoMapper) {
@@ -31,10 +35,10 @@ public class VideoServiceImpl implements VideoService {
     }
 
     @Override
-    public VideoDTO saveVideo(MultipartFile file, VideoDTO videoDTO) {
+    public VideoResponseDTO saveVideo(MultipartFile file, VideoRequestDTO videoDTO) {
         try {
-            String uploadDir = "src/main/resources/static/videos";
-            Path filePath = Paths.get(uploadDir, file.getOriginalFilename());
+
+            Path filePath = Paths.get(videoDirectory, file.getOriginalFilename());
 
             if (!Files.exists(filePath.getParent())) {
                 Files.createDirectories(filePath.getParent());
@@ -44,47 +48,39 @@ public class VideoServiceImpl implements VideoService {
 
             videoDTO.setPath("/videos/" + file.getOriginalFilename());
             videoDTO.setSize(file.getSize());
-            videoDTO.setFormat(getExtention(filePath));
-            videoDTO.setUploadedAt(LocalDateTime.now());
-
-            // Ajouter un journal avant l'analyse de la vidéo
-            System.out.println("Analyse de la durée de la vidéo avec FFprobe...");
+            videoDTO.setFormat(getExtension(filePath));
             videoDTO.setDuration(VideoUtils.getVideoDuration(filePath));
 
             Video video = videoMapper.convertToEntity(videoDTO);
+            video.setUploadedAt(LocalDateTime.now());
             Video savedVideo = videoRepository.save(video);
 
             return videoMapper.convertToDTO(savedVideo);
         } catch (Exception e) {
-            // Journal détaillé de l'erreur
-            System.err.println("Erreur dans saveVideo: " + e.getMessage());
-            e.printStackTrace();
             throw new RuntimeException("Erreur lors de l'upload de la vidéo", e);
         }
     }
 
-
-
-
     @Override
-    public List<VideoDTO> getAllVideos() {
+    public List<VideoResponseDTO> getAllVideos() {
         return videoRepository.findAll().stream()
                 .map(videoMapper::convertToDTO)
                 .collect(Collectors.toList());
     }
 
     @Override
-    public VideoDTO getVideoById(Long id) {
+    public VideoResponseDTO getVideoById(Long id) {
         Video video = videoRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Video introuvable avec le ID: " + id));
         return videoMapper.convertToDTO(video);
     }
 
     @Override
-    public VideoDTO updateVideo(VideoDTO videoDTO , Long id) {
+    public VideoResponseDTO updateVideo(VideoRequestDTO videoDTO , Long id) {
         Video existingVideo = videoRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Video introuvable avec le ID: " + id));
         videoMapper.updateEntityWithDto(existingVideo, videoDTO);
+        existingVideo.setUploadedAt(LocalDateTime.now());
         Video updatedVideo = videoRepository.save(existingVideo);
         return videoMapper.convertToDTO(updatedVideo);
     }
@@ -94,7 +90,7 @@ public class VideoServiceImpl implements VideoService {
         Video video = videoRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Video non trouvée avec l'id: " + id));
 
-        Path filePath = Paths.get("src/main/resources/static/videos", video.getPath().replace("/videos/", ""));
+        Path filePath = Paths.get(videoDirectory, video.getPath().replace("/videos/", ""));
         try {
             if (Files.exists(filePath)) {
                 Files.delete(filePath);
@@ -116,7 +112,7 @@ public class VideoServiceImpl implements VideoService {
         return fileName.substring(0, lastDotIndex);
     }
 
-    public String getExtention(Path path) {
+    public String getExtension(Path path) {
         try {
             String contentType = Files.probeContentType(path);
             return contentType != null ? contentType : "application/octet-stream";

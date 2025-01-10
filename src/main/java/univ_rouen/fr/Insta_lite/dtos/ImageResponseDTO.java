@@ -5,9 +5,7 @@ import univ_rouen.fr.Insta_lite.enumeration.Visibility;
 
 import java.time.LocalDateTime;
 
-public class ImageDTO {
-
-
+public class ImageResponseDTO {
     private String title;
     private String path;
     private Visibility visibility;
@@ -17,11 +15,10 @@ public class ImageDTO {
     @NotNull(message = "uploadedById ne doit pas etre null")
     private Long uploadedById;
 
-    public ImageDTO() {
+    public ImageResponseDTO() {
     }
 
-    public ImageDTO(String title, String path, Visibility visibility, long size, String format, LocalDateTime uploadedAt, Long uploadedById) {
-
+    public ImageResponseDTO(String title, String path, Visibility visibility, long size, String format, LocalDateTime uploadedAt, Long uploadedById) {
         this.title = title;
         this.path = path;
         this.visibility = visibility;
@@ -31,76 +28,59 @@ public class ImageDTO {
         this.uploadedById = uploadedById;
     }
 
-
-
     public String getTitle() {
         return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getPath() {
         return path;
     }
 
-    public Visibility getVisibility() {
-        return visibility;
-    }
-
-    public long getSize() {
-        return size;
-    }
-
-    public String getFormat() {
-        return format;
-    }
-
-    public LocalDateTime getUploadedAt() {
-        return uploadedAt;
-    }
-
-    public Long getUploadedById() {
-        return uploadedById;
-    }
-
-
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
     public void setPath(String path) {
         this.path = path;
+    }
+
+    public Visibility getVisibility() {
+        return visibility;
     }
 
     public void setVisibility(Visibility visibility) {
         this.visibility = visibility;
     }
 
+    public long getSize() {
+        return size;
+    }
+
     public void setSize(long size) {
         this.size = size;
+    }
+
+    public String getFormat() {
+        return format;
     }
 
     public void setFormat(String format) {
         this.format = format;
     }
 
+    public LocalDateTime getUploadedAt() {
+        return uploadedAt;
+    }
+
     public void setUploadedAt(LocalDateTime uploadedAt) {
         this.uploadedAt = uploadedAt;
     }
 
-    public void setUploadedById(Long uploadedById) {
-        this.uploadedById = uploadedById;
+    public Long getUploadedById() {
+        return uploadedById;
     }
 
-    @Override
-    public String toString() {
-        return "ImageDTO{" +
-                "title='" + title + '\'' +
-                ", path='" + path + '\'' +
-                ", visibility=" + visibility +
-                ", size=" + size +
-                ", format='" + format + '\'' +
-                ", uploadedAt=" + uploadedAt +
-                ", uploadedById=" + uploadedById +
-                '}';
+    public void setUploadedById(Long uploadedById) {
+        this.uploadedById = uploadedById;
     }
 }

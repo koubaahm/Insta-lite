@@ -1,12 +1,12 @@
 package univ_rouen.fr.Insta_lite.mapper;
 
 import org.springframework.stereotype.Component;
-import univ_rouen.fr.Insta_lite.dtos.CommentDTO;
-import univ_rouen.fr.Insta_lite.models.AppUser;
+
+import univ_rouen.fr.Insta_lite.dtos.CommentRequestDTO;
+import univ_rouen.fr.Insta_lite.dtos.CommentResponseDTO;
 import univ_rouen.fr.Insta_lite.models.Comment;
 import univ_rouen.fr.Insta_lite.models.Image;
 import univ_rouen.fr.Insta_lite.models.Video;
-import univ_rouen.fr.Insta_lite.repository.UserRepository;
 import univ_rouen.fr.Insta_lite.repository.ImageRepository;
 import univ_rouen.fr.Insta_lite.repository.VideoRepository;
 
@@ -15,24 +15,20 @@ import java.util.Optional;
 @Component
 public class CommentMapperImpl implements CommentMapper {
 
-    private final UserRepository userRepository;
+
     private final ImageRepository imageRepository;
     private final VideoRepository videoRepository;
 
-    public CommentMapperImpl(UserRepository userRepository, ImageRepository imageRepository, VideoRepository videoRepository) {
-        this.userRepository = userRepository;
+    public CommentMapperImpl(ImageRepository imageRepository, VideoRepository videoRepository) {
+
         this.imageRepository = imageRepository;
         this.videoRepository = videoRepository;
     }
 
     @Override
-    public Comment convertToEntity(CommentDTO commentDTO) {
+    public Comment convertToEntity(CommentRequestDTO commentDTO) {
         Comment comment = new Comment();
         comment.setContent(commentDTO.getContent());
-        comment.setCreatedAt(commentDTO.getCreatedAt());
-
-        Optional<AppUser> createdBy = userRepository.findById(commentDTO.getCreatedById());
-        createdBy.ifPresent(comment::setCreatedBy);
 
         Optional<Image> image = imageRepository.findById(commentDTO.getImageId());
         image.ifPresent(comment::setImage);
@@ -44,8 +40,8 @@ public class CommentMapperImpl implements CommentMapper {
     }
 
     @Override
-    public CommentDTO convertToDTO(Comment comment) {
-        CommentDTO commentDTO = new CommentDTO();
+    public CommentResponseDTO convertToDTO(Comment comment) {
+        CommentResponseDTO commentDTO = new CommentResponseDTO();
         commentDTO.setContent(comment.getContent());
         commentDTO.setCreatedAt(comment.getCreatedAt());
 
@@ -65,13 +61,10 @@ public class CommentMapperImpl implements CommentMapper {
     }
 
     @Override
-    public void updateEntityWithDto(CommentDTO commentDTO, Comment comment) {
+    public void updateEntityWithDto(CommentRequestDTO commentDTO, Comment comment) {
 
         comment.setContent(commentDTO.getContent());
-        comment.setCreatedAt(commentDTO.getCreatedAt());
 
-        Optional<AppUser> createdBy = userRepository.findById(commentDTO.getCreatedById());
-        createdBy.ifPresent(comment::setCreatedBy);
 
         Optional<Image> image = imageRepository.findById(commentDTO.getImageId());
         image.ifPresent(comment::setImage);

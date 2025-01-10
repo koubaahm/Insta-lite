@@ -1,11 +1,9 @@
 package univ_rouen.fr.Insta_lite.dtos;
 
-
 import java.time.LocalDateTime;
 import univ_rouen.fr.Insta_lite.enumeration.Visibility;
 
-public class VideoDTO {
-
+public class VideoResponseDTO {
     private String title;
     private String path;
     private Visibility visibility;
@@ -13,9 +11,9 @@ public class VideoDTO {
     private String format;
     private String duration;
     private LocalDateTime uploadedAt;
-    private Long uploadedById;  // Utilisez l'ID de l'utilisateur pour simplifier la relation
+    private Long uploadedById;
 
-    // Getters et Setters
+
     public String getTitle() {
         return title;
     }
@@ -80,4 +78,3 @@ public class VideoDTO {
         this.uploadedById = uploadedById;
     }
 }
-

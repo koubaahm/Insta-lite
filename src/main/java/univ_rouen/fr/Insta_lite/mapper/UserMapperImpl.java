@@ -18,7 +18,7 @@ public class UserMapperImpl implements UserMapper {
         if (user == null) {
             return null;
         }
-      
+
         AppUserResponseDTO dto = new AppUserResponseDTO();
         dto.setId(user.getId());
         dto.setName(user.getName());

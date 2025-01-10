@@ -18,4 +18,5 @@ public interface UserService {
     Optional<AppUserResponseDTO> findByEmail(String email);
 
     AppUserResponseDTO updatePassword(String email, String newPassword);
+    Long getIdByEmail(String email);
 }
