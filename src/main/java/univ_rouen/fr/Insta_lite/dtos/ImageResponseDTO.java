@@ -6,6 +6,7 @@ import univ_rouen.fr.Insta_lite.enumeration.Visibility;
 import java.time.LocalDateTime;
 
 public class ImageResponseDTO {
+    private Long id;
     private String title;
     private String path;
     private Visibility visibility;
@@ -18,7 +19,8 @@ public class ImageResponseDTO {
     public ImageResponseDTO() {
     }
 
-    public ImageResponseDTO(String title, String path, Visibility visibility, long size, String format, LocalDateTime uploadedAt, Long uploadedById) {
+    public ImageResponseDTO(Long id,String title, String path, Visibility visibility, long size, String format, LocalDateTime uploadedAt, Long uploadedById) {
+        this.id = id;
         this.title = title;
         this.path = path;
         this.visibility = visibility;
@@ -26,6 +28,13 @@ public class ImageResponseDTO {
         this.format = format;
         this.uploadedAt = uploadedAt;
         this.uploadedById = uploadedById;
+    }
+
+    public Long getId() {
+        return id;
+    }
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getTitle() {

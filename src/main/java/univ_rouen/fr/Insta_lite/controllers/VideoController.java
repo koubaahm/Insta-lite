@@ -37,14 +37,15 @@ public class VideoController {
     @PostMapping
     public ResponseEntity<String> uploadVideo(
             @RequestParam("file") MultipartFile file,
-            @RequestParam("title") String title,
             @Parameter(description = "id de l'utilisateur qui télécharge la vidéo", required = true)
             @RequestParam("uploadedById") Long uploadedById,
             @Parameter(description = "Visibilité de la vidéo", required = true)
             @RequestParam("visibility") Visibility visibility) {
         try {
+            String originalFilename = file.getOriginalFilename();
+            assert originalFilename != null;
             VideoRequestDTO videoDTO = new VideoRequestDTO();
-            videoDTO.setTitle(title);
+            videoDTO.setTitle(videoService.getVideoNameWithoutExtension(originalFilename));
             videoDTO.setUploadedById(uploadedById);
             videoDTO.setVisibility(visibility);
             videoService.saveVideo(file, videoDTO);

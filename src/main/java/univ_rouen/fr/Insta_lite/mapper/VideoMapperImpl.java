@@ -35,6 +35,7 @@ public class VideoMapperImpl implements VideoMapper {
     @Override
     public VideoResponseDTO convertToDTO(Video video) {
         VideoResponseDTO videoDTO = new VideoResponseDTO();
+        videoDTO.setId(video.getId());
         videoDTO.setTitle(video.getTitle());
         videoDTO.setPath(video.getPath());
         videoDTO.setVisibility(video.getVisibility());

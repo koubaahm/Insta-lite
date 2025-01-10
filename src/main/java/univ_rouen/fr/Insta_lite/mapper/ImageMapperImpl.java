@@ -31,6 +31,7 @@ public class ImageMapperImpl implements ImageMapper {
     @Override
     public ImageResponseDTO convertToDto(Image image) {
         ImageResponseDTO imageDTO = new ImageResponseDTO();
+        imageDTO.setId(image.getId());
         imageDTO.setTitle(image.getTitle());
         imageDTO.setPath(image.getPath());
         imageDTO.setVisibility(image.getVisibility());

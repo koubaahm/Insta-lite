@@ -121,9 +121,8 @@ public class ImageServiceImpl implements ImageService {
         try {
 
             Path path = Paths.get(imageDirectory).resolve(filename);
-            System.out.println("aaaaaaaaaaaaaaaa"+path);
+
             Resource resource = new FileSystemResource(path);
-            System.out.println("bbbbbbbbbbbbbbbbb"+resource);
             if (!resource.exists()) {
                 throw new RuntimeException("Fichier non trouvé: " + filename);
             }

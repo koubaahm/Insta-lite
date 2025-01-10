@@ -13,4 +13,6 @@ public interface VideoService {
     VideoResponseDTO getVideoById(Long id);
     VideoResponseDTO updateVideo(VideoRequestDTO videoDTO, Long id);
     void deleteVideoById(Long id);
+
+    String getVideoNameWithoutExtension(String fileName);
 }

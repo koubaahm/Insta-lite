@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 import univ_rouen.fr.Insta_lite.enumeration.Visibility;
 
 public class VideoResponseDTO {
+    private Long id;
     private String title;
     private String path;
     private Visibility visibility;
@@ -13,6 +14,12 @@ public class VideoResponseDTO {
     private LocalDateTime uploadedAt;
     private Long uploadedById;
 
+    public Long getId() {
+        return id;
+    }
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getTitle() {
         return title;
