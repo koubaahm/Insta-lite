@@ -74,11 +74,14 @@ public class ImageController {
     @GetMapping("/image/{filename}")
     @ResponseBody
     public ResponseEntity<Resource> getImage(@PathVariable String filename) {
+
+        System.out.println("cccccccccccccccc"+filename);
         try {
             Resource resource = imageService.getImageSource(filename);
+
             Path path = resource.getFile().toPath();
             String contentType = imageService.getExtension(path);
-
+            System.out.println("************"+contentType);
             return ResponseEntity.ok()
                     .header(HttpHeaders.CONTENT_DISPOSITION, "inline; filename=\"" + filename + "\"")
                     .contentType(MediaType.parseMediaType(contentType))

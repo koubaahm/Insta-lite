@@ -23,17 +23,16 @@ public class FormLoginAuthenticationSuccessHandler implements AuthenticationSucc
 
     @Override
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException {
-        // Générer le token JWT
+
         String jwtToken = jwtTokenService.generateToken(authentication);
 
-        System.out.println("jwtToken: " + jwtToken);
+        System.out.println("Bearer " + jwtToken);
 
-        // Ajouter le JWT à l'en-tête de la réponse
+        // ajout de token au header
         response.setHeader("Authorization", "Bearer " + jwtToken);
 
-        // Répondre directement avec le token, plutôt que de rediriger
         response.setStatus(HttpServletResponse.SC_OK);
-        response.getWriter().write("JWT Token: " + jwtToken);
+        response.getWriter().write("Bearer " + jwtToken);
         response.getWriter().flush();
     }
 

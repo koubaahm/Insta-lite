@@ -42,6 +42,7 @@ public class CommentMapperImpl implements CommentMapper {
     @Override
     public CommentResponseDTO convertToDTO(Comment comment) {
         CommentResponseDTO commentDTO = new CommentResponseDTO();
+        commentDTO.setId(comment.getId());
         commentDTO.setContent(comment.getContent());
         commentDTO.setCreatedAt(comment.getCreatedAt());
 

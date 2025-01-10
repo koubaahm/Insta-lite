@@ -114,16 +114,16 @@ public class ImageServiceImpl implements ImageService {
 
         imageRepository.deleteById(id);
     }
+
     //renvoi l'image sur le navigateur
-
-
     @Override
     public Resource getImageSource(String filename) {
         try {
 
             Path path = Paths.get(imageDirectory).resolve(filename);
+            System.out.println("aaaaaaaaaaaaaaaa"+path);
             Resource resource = new FileSystemResource(path);
-
+            System.out.println("bbbbbbbbbbbbbbbbb"+resource);
             if (!resource.exists()) {
                 throw new RuntimeException("Fichier non trouvé: " + filename);
             }
@@ -135,22 +135,20 @@ public class ImageServiceImpl implements ImageService {
         }
     }
     //extraire l'extension de l'image
+
     @Override
     public String getExtension(Path path) {
         try {
             String contentType = Files.probeContentType(path);
             if (contentType != null) {
-                int index = contentType.lastIndexOf('/');
-                if (index != -1 && index + 1 < contentType.length()) {
-                    return contentType.substring(index + 1);
-                }
                 return contentType;
             }
-            return "non spécifié";
+            return "application/octet-stream";
         } catch (Exception e) {
-            throw new RuntimeException("erreur detection mime", e);
+            throw new RuntimeException("Erreur lors de la détection du type MIME", e);
         }
     }
+
 
     @Override
     public String getImageNameWithoutExtension(String fileName) {
