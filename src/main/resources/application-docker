@@ -1,0 +1,9 @@
+
+# Journalisation
+logging.file.name=/logs/app-docker.log
+
+# Chemin vers ffprobe
+ffmpeg.ffprobe-path=/usr/bin/ffprobe
+# Dossiers d'images et vidéos
+image.directory=/data/app/images
+video.directory=/data/app/videos

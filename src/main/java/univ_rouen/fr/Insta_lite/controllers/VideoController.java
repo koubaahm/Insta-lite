@@ -2,6 +2,8 @@ package univ_rouen.fr.Insta_lite.controllers;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpHeaders;
@@ -25,7 +27,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/videos")
 public class VideoController {
-
+    private static final Logger logger = LoggerFactory.getLogger(VideoController.class);
     private final VideoServiceImpl videoService;
     @Value("${video.directory}")
     private String videoDirectory;
@@ -44,16 +46,29 @@ public class VideoController {
             @Parameter(description = "Visibilité de la vidéo", required = true)
             @RequestParam("visibility") Visibility visibility) {
         try {
+            logger.info("Début de l'upload de vidéo par l'utilisateur ID : {}", uploadedById);
+
             String originalFilename = file.getOriginalFilename();
-            assert originalFilename != null;
+            if (originalFilename == null || originalFilename.isEmpty()) {
+                logger.error("Le fichier est invalide ou le nom est vide.");
+                return ResponseEntity.status(400).body("Le fichier est invalide ou le nom est vide.");
+            }
+
+            logger.info("Nom original du fichier : {}", originalFilename);
+
             VideoRequestDTO videoDTO = new VideoRequestDTO();
             videoDTO.setTitle(videoService.getVideoNameWithoutExtension(originalFilename));
             videoDTO.setUploadedById(uploadedById);
             videoDTO.setVisibility(visibility);
+
+            logger.debug("Données du DTO avant sauvegarde : {}", videoDTO);
+
             videoService.saveVideo(file, videoDTO);
 
+            logger.info("Vidéo téléchargée avec succès pour l'utilisateur ID : {}", uploadedById);
             return ResponseEntity.ok("vidéo téléchargée avec succès.");
         } catch (Exception e) {
+            logger.error("Erreur lors du téléchargement de la vidéo : {}", e.getMessage(), e);
             return ResponseEntity.status(500).body("erreur lors du téléchargement de la vidéo : " + e.getMessage());
         }
     }

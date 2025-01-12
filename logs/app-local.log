@@ -1,0 +1,216 @@
+2025-01-12T20:47:01.966+01:00  INFO 29096 --- [restartedMain] u.fr.Insta_lite.InstaLiteApplication     : Starting InstaLiteApplication using Java 23.0.1 with PID 29096 (C:\Users\Ahmed\Desktop\projet jee\Insta-lite\target\classes started by Ahmed in C:\Users\Ahmed\Desktop\projet jee\Insta-lite)
+2025-01-12T20:47:01.968+01:00 DEBUG 29096 --- [restartedMain] u.fr.Insta_lite.InstaLiteApplication     : Running with Spring Boot v3.3.6, Spring v6.1.15
+2025-01-12T20:47:01.968+01:00  INFO 29096 --- [restartedMain] u.fr.Insta_lite.InstaLiteApplication     : The following 1 profile is active: "local"
+2025-01-12T20:47:02.026+01:00  INFO 29096 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-01-12T20:47:02.026+01:00  INFO 29096 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-01-12T20:47:02.043+01:00  INFO 29096 --- [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file 'C:\Users\Ahmed\Desktop\projet jee\Insta-lite\docker-compose.yaml'
+2025-01-12T20:47:03.005+01:00  INFO 29096 --- [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : There are already Docker Compose services running, skipping startup
+2025-01-12T20:47:04.308+01:00  INFO 29096 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-12T20:47:04.369+01:00  INFO 29096 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 4 JPA repository interfaces.
+2025-01-12T20:47:05.148+01:00  INFO 29096 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8089 (http)
+2025-01-12T20:47:05.161+01:00  INFO 29096 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-12T20:47:05.161+01:00  INFO 29096 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-01-12T20:47:05.211+01:00  INFO 29096 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-12T20:47:05.211+01:00  INFO 29096 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2193 ms
+2025-01-12T20:47:05.481+01:00  INFO 29096 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-12T20:47:05.525+01:00  INFO 29096 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-01-12T20:47:05.557+01:00  INFO 29096 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-12T20:47:05.796+01:00  INFO 29096 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-12T20:47:05.820+01:00  INFO 29096 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-12T20:47:05.949+01:00  INFO 29096 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@52996196
+2025-01-12T20:47:05.950+01:00  INFO 29096 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-12T20:47:05.975+01:00  WARN 29096 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-12T20:47:06.831+01:00  INFO 29096 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-12T20:47:06.942+01:00  INFO 29096 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-12T20:47:07.206+01:00  INFO 29096 --- [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-01-12T20:47:07.703+01:00  WARN 29096 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-12T20:47:07.936+01:00  INFO 29096 --- [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-01-12T20:47:08.071+01:00 DEBUG 29096 --- [restartedMain] u.f.I.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2025-01-12T20:47:08.072+01:00 DEBUG 29096 --- [restartedMain] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2025-01-12T20:47:08.396+01:00 DEBUG 29096 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 39 mappings in 'requestMappingHandlerMapping'
+2025-01-12T20:47:08.509+01:00 DEBUG 29096 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-01-12T20:47:08.723+01:00  INFO 29096 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-01-12T20:47:08.947+01:00 DEBUG 29096 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-01-12T20:47:08.984+01:00 DEBUG 29096 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 3 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-01-12T20:47:09.016+01:00 DEBUG 29096 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 3 @ExceptionHandler, 0 ResponseBodyAdvice
+2025-01-12T20:47:09.578+01:00  INFO 29096 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-01-12T20:47:09.644+01:00  INFO 29096 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8089 (http) with context path '/'
+2025-01-12T20:47:09.657+01:00  INFO 29096 --- [restartedMain] u.fr.Insta_lite.InstaLiteApplication     : Started InstaLiteApplication in 8.157 seconds (process running for 8.949)
+2025-01-12T20:47:09.985+01:00  INFO 29096 --- [RMI TCP Connection(2)-10.116.0.179] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-12T20:47:09.986+01:00  INFO 29096 --- [RMI TCP Connection(2)-10.116.0.179] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-01-12T20:47:09.986+01:00 DEBUG 29096 --- [RMI TCP Connection(2)-10.116.0.179] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-01-12T20:47:09.986+01:00 DEBUG 29096 --- [RMI TCP Connection(2)-10.116.0.179] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-01-12T20:47:09.986+01:00 DEBUG 29096 --- [RMI TCP Connection(2)-10.116.0.179] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-01-12T20:47:09.988+01:00 DEBUG 29096 --- [RMI TCP Connection(2)-10.116.0.179] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@3db216dd
+2025-01-12T20:47:09.988+01:00 DEBUG 29096 --- [RMI TCP Connection(2)-10.116.0.179] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@2c9215e1
+2025-01-12T20:47:09.989+01:00 DEBUG 29096 --- [RMI TCP Connection(2)-10.116.0.179] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-01-12T20:47:09.989+01:00  INFO 29096 --- [RMI TCP Connection(2)-10.116.0.179] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-01-12T20:47:30.604+01:00 DEBUG 29096 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/index.html", parameters={}
+2025-01-12T20:47:30.608+01:00 DEBUG 29096 --- [http-nio-8089-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-01-12T20:47:30.629+01:00 DEBUG 29096 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-12T20:47:30.648+01:00 DEBUG 29096 --- [http-nio-8089-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/swagger-ui.css", parameters={}
+2025-01-12T20:47:30.648+01:00 DEBUG 29096 --- [http-nio-8089-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/index.css", parameters={}
+2025-01-12T20:47:30.648+01:00 DEBUG 29096 --- [http-nio-8089-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/swagger-initializer.js", parameters={}
+2025-01-12T20:47:30.648+01:00 DEBUG 29096 --- [http-nio-8089-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/swagger-ui-bundle.js", parameters={}
+2025-01-12T20:47:30.648+01:00 DEBUG 29096 --- [http-nio-8089-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/swagger-ui-standalone-preset.js", parameters={}
+2025-01-12T20:47:30.649+01:00 DEBUG 29096 --- [http-nio-8089-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-01-12T20:47:30.649+01:00 DEBUG 29096 --- [http-nio-8089-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-01-12T20:47:30.649+01:00 DEBUG 29096 --- [http-nio-8089-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-01-12T20:47:30.649+01:00 DEBUG 29096 --- [http-nio-8089-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-01-12T20:47:30.649+01:00 DEBUG 29096 --- [http-nio-8089-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-01-12T20:47:30.651+01:00 DEBUG 29096 --- [http-nio-8089-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-12T20:47:30.654+01:00 DEBUG 29096 --- [http-nio-8089-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-12T20:47:30.654+01:00 DEBUG 29096 --- [http-nio-8089-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-12T20:47:30.664+01:00 DEBUG 29096 --- [http-nio-8089-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-12T20:47:30.667+01:00 DEBUG 29096 --- [http-nio-8089-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-12T20:47:30.834+01:00 DEBUG 29096 --- [http-nio-8089-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/v3/api-docs/swagger-config", parameters={}
+2025-01-12T20:47:30.835+01:00 DEBUG 29096 --- [http-nio-8089-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springdoc.webmvc.ui.SwaggerConfigResource#openapiJson(HttpServletRequest)
+2025-01-12T20:47:30.837+01:00 DEBUG 29096 --- [http-nio-8089-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/favicon-32x32.png", parameters={}
+2025-01-12T20:47:30.838+01:00 DEBUG 29096 --- [http-nio-8089-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-01-12T20:47:30.840+01:00 DEBUG 29096 --- [http-nio-8089-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-12T20:47:30.853+01:00 DEBUG 29096 --- [http-nio-8089-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json]
+2025-01-12T20:47:30.855+01:00 DEBUG 29096 --- [http-nio-8089-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Writing [{configUrl=/v3/api-docs/swagger-config, oauth2RedirectUrl=http://localhost:8089/swagger-ui/oauth2-re (truncated)...]
+2025-01-12T20:47:30.861+01:00 DEBUG 29096 --- [http-nio-8089-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-12T20:47:30.891+01:00 DEBUG 29096 --- [http-nio-8089-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/v3/api-docs/InstaLite", parameters={}
+2025-01-12T20:47:30.893+01:00 DEBUG 29096 --- [http-nio-8089-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springdoc.webmvc.api.MultipleOpenApiWebMvcResource#openapiJson(HttpServletRequest, String, String, Locale)
+2025-01-12T20:47:32.707+01:00  INFO 29096 --- [http-nio-8089-exec-9] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 1804 ms
+2025-01-12T20:47:32.718+01:00 DEBUG 29096 --- [http-nio-8089-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, */*] and supported [application/json]
+2025-01-12T20:47:32.720+01:00 DEBUG 29096 --- [http-nio-8089-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Writing [{123, 34, 111, 112, 101, 110, 97, 112, 105, 34, 58, 34, 51, 46, 48, 46, 49, 34, 44, 34, 105, 110, 10 (truncated)...]
+2025-01-12T20:47:32.721+01:00 DEBUG 29096 --- [http-nio-8089-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-12T20:48:37.178+01:00 DEBUG 29096 --- [http-nio-8089-exec-4] o.s.web.servlet.DispatcherServlet        : POST "/api/videos", parameters={multipart}
+2025-01-12T20:48:37.221+01:00 DEBUG 29096 --- [http-nio-8089-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to univ_rouen.fr.Insta_lite.controllers.VideoController#uploadVideo(MultipartFile, Long, Visibility)
+2025-01-12T20:48:37.223+01:00  INFO 29096 --- [http-nio-8089-exec-4] u.f.I.controllers.VideoController        : Début de l'upload de vidéo par l'utilisateur ID : 26
+2025-01-12T20:48:37.223+01:00  INFO 29096 --- [http-nio-8089-exec-4] u.f.I.controllers.VideoController        : Nom original du fichier : video1.mp4
+2025-01-12T20:48:37.223+01:00 DEBUG 29096 --- [http-nio-8089-exec-4] u.f.I.controllers.VideoController        : Données du DTO avant sauvegarde : univ_rouen.fr.Insta_lite.dtos.VideoRequestDTO@2237957a
+2025-01-12T20:48:37.223+01:00  INFO 29096 --- [http-nio-8089-exec-4] u.f.I.services.VideoServiceImpl          : Début du processus d'upload de vidéo...
+2025-01-12T20:48:37.223+01:00 DEBUG 29096 --- [http-nio-8089-exec-4] u.f.I.services.VideoServiceImpl          : Données du DTO : univ_rouen.fr.Insta_lite.dtos.VideoRequestDTO@2237957a
+2025-01-12T20:48:37.315+01:00  INFO 29096 --- [http-nio-8089-exec-4] u.f.I.services.VideoServiceImpl          : Fichier copié avec succès : \data\app\videos\video1.mp4
+2025-01-12T20:48:37.316+01:00 DEBUG 29096 --- [http-nio-8089-exec-4] u.f.I.services.VideoServiceImpl          : Path set: /videos/video1.mp4
+2025-01-12T20:48:37.316+01:00 DEBUG 29096 --- [http-nio-8089-exec-4] u.f.I.services.VideoServiceImpl          : Size set: 1055736
+2025-01-12T20:48:37.342+01:00  INFO 29096 --- [http-nio-8089-exec-4] net.bramp.ffmpeg.RunProcessFunction      : C:/ffmpeg/bin/ffprobe -version
+2025-01-12T20:48:37.875+01:00  INFO 29096 --- [http-nio-8089-exec-4] net.bramp.ffmpeg.RunProcessFunction      : C:/ffmpeg/bin/ffprobe -v quiet -print_format json -show_error -show_format -show_streams -show_chapters \data\app\videos\video1.mp4
+2025-01-12T20:48:37.984+01:00  INFO 29096 --- [http-nio-8089-exec-4] net.bramp.ffmpeg.RunProcessFunction      : C:/ffmpeg/bin/ffprobe -version
+2025-01-12T20:48:38.019+01:00  INFO 29096 --- [http-nio-8089-exec-4] net.bramp.ffmpeg.RunProcessFunction      : C:/ffmpeg/bin/ffprobe -v quiet -print_format json -show_error -show_format -show_streams -show_chapters \data\app\videos\video1.mp4
+2025-01-12T20:48:38.072+01:00 DEBUG 29096 --- [http-nio-8089-exec-4] u.f.I.services.VideoServiceImpl          : Duration set: 00:00:05
+2025-01-12T20:48:38.073+01:00 DEBUG 29096 --- [http-nio-8089-exec-4] u.f.I.services.VideoServiceImpl          : Données du DTO après mapping : univ_rouen.fr.Insta_lite.dtos.VideoRequestDTO@2237957a
+2025-01-12T20:48:38.074+01:00 DEBUG 29096 --- [http-nio-8089-exec-4] u.f.I.services.VideoServiceImpl          : Vidéo avant sauvegarde : univ_rouen.fr.Insta_lite.models.Video@2d7b5f4e
+2025-01-12T20:48:38.121+01:00  INFO 29096 --- [http-nio-8089-exec-4] u.f.I.services.VideoServiceImpl          : Vidéo sauvegardée avec succès : univ_rouen.fr.Insta_lite.models.Video@2d7b5f4e
+2025-01-12T20:48:38.121+01:00  INFO 29096 --- [http-nio-8089-exec-4] u.f.I.controllers.VideoController        : Vidéo téléchargée avec succès pour l'utilisateur ID : 26
+2025-01-12T20:48:38.125+01:00 DEBUG 29096 --- [http-nio-8089-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2025-01-12T20:48:38.125+01:00 DEBUG 29096 --- [http-nio-8089-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["vidéo téléchargée avec succès."]
+2025-01-12T20:48:38.129+01:00 DEBUG 29096 --- [http-nio-8089-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-12T20:50:37.913+01:00 DEBUG 29096 --- [http-nio-8089-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/api/videos", parameters={}
+2025-01-12T20:50:37.913+01:00 DEBUG 29096 --- [http-nio-8089-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to univ_rouen.fr.Insta_lite.controllers.VideoController#getAllVideos()
+2025-01-12T20:50:37.961+01:00 DEBUG 29096 --- [http-nio-8089-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/hal+json', given [application/hal+json] and supported [application/json, application/*+json]
+2025-01-12T20:50:37.961+01:00 DEBUG 29096 --- [http-nio-8089-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Writing [[univ_rouen.fr.Insta_lite.dtos.VideoResponseDTO@5630c2c9]]
+2025-01-12T20:50:37.964+01:00 DEBUG 29096 --- [http-nio-8089-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-12T20:51:40.119+01:00  INFO 29096 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-12T20:51:40.124+01:00  INFO 29096 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-12T20:51:40.130+01:00  INFO 29096 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-12T20:51:42.188+01:00  INFO 6400 --- [restartedMain] u.fr.Insta_lite.InstaLiteApplication     : Starting InstaLiteApplication using Java 23.0.1 with PID 6400 (C:\Users\Ahmed\Desktop\projet jee\Insta-lite\target\classes started by Ahmed in C:\Users\Ahmed\Desktop\projet jee\Insta-lite)
+2025-01-12T20:51:42.189+01:00 DEBUG 6400 --- [restartedMain] u.fr.Insta_lite.InstaLiteApplication     : Running with Spring Boot v3.3.6, Spring v6.1.15
+2025-01-12T20:51:42.190+01:00  INFO 6400 --- [restartedMain] u.fr.Insta_lite.InstaLiteApplication     : The following 1 profile is active: "local"
+2025-01-12T20:51:42.240+01:00  INFO 6400 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-01-12T20:51:42.240+01:00  INFO 6400 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-01-12T20:51:42.258+01:00  INFO 6400 --- [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file 'C:\Users\Ahmed\Desktop\projet jee\Insta-lite\docker-compose.yaml'
+2025-01-12T20:51:43.168+01:00  INFO 6400 --- [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : There are already Docker Compose services running, skipping startup
+2025-01-12T20:51:44.079+01:00  INFO 6400 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-12T20:51:44.133+01:00  INFO 6400 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48 ms. Found 4 JPA repository interfaces.
+2025-01-12T20:51:44.854+01:00  INFO 6400 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8089 (http)
+2025-01-12T20:51:44.866+01:00  INFO 6400 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-12T20:51:44.867+01:00  INFO 6400 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-01-12T20:51:44.913+01:00  INFO 6400 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-12T20:51:44.914+01:00  INFO 6400 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1738 ms
+2025-01-12T20:51:45.161+01:00  INFO 6400 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-12T20:51:45.206+01:00  INFO 6400 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-01-12T20:51:45.233+01:00  INFO 6400 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-12T20:51:45.458+01:00  INFO 6400 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-12T20:51:45.483+01:00  INFO 6400 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-12T20:51:45.595+01:00  INFO 6400 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7fcdfb69
+2025-01-12T20:51:45.602+01:00  INFO 6400 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-12T20:51:45.626+01:00  WARN 6400 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-12T20:51:46.441+01:00  INFO 6400 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-12T20:51:46.534+01:00  INFO 6400 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-12T20:51:46.751+01:00  INFO 6400 --- [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-01-12T20:51:47.243+01:00  WARN 6400 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-12T20:51:47.516+01:00  INFO 6400 --- [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-01-12T20:51:47.622+01:00 DEBUG 6400 --- [restartedMain] u.f.I.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2025-01-12T20:51:47.623+01:00 DEBUG 6400 --- [restartedMain] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2025-01-12T20:51:47.930+01:00 DEBUG 6400 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 39 mappings in 'requestMappingHandlerMapping'
+2025-01-12T20:51:48.034+01:00 DEBUG 6400 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-01-12T20:51:48.222+01:00  INFO 6400 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-01-12T20:51:48.428+01:00 DEBUG 6400 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-01-12T20:51:48.464+01:00 DEBUG 6400 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 3 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-01-12T20:51:48.496+01:00 DEBUG 6400 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 3 @ExceptionHandler, 0 ResponseBodyAdvice
+2025-01-12T20:51:48.994+01:00  INFO 6400 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-01-12T20:51:49.056+01:00  INFO 6400 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8089 (http) with context path '/'
+2025-01-12T20:51:49.067+01:00  INFO 6400 --- [restartedMain] u.fr.Insta_lite.InstaLiteApplication     : Started InstaLiteApplication in 7.244 seconds (process running for 7.919)
+2025-01-12T20:51:49.370+01:00  INFO 6400 --- [RMI TCP Connection(4)-10.116.0.179] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-12T20:51:49.370+01:00  INFO 6400 --- [RMI TCP Connection(4)-10.116.0.179] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-01-12T20:51:49.370+01:00 DEBUG 6400 --- [RMI TCP Connection(4)-10.116.0.179] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-01-12T20:51:49.370+01:00 DEBUG 6400 --- [RMI TCP Connection(4)-10.116.0.179] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-01-12T20:51:49.371+01:00 DEBUG 6400 --- [RMI TCP Connection(4)-10.116.0.179] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-01-12T20:51:49.372+01:00 DEBUG 6400 --- [RMI TCP Connection(4)-10.116.0.179] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@9d28b1d
+2025-01-12T20:51:49.373+01:00 DEBUG 6400 --- [RMI TCP Connection(4)-10.116.0.179] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@37d518a6
+2025-01-12T20:51:49.373+01:00 DEBUG 6400 --- [RMI TCP Connection(4)-10.116.0.179] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-01-12T20:51:49.373+01:00  INFO 6400 --- [RMI TCP Connection(4)-10.116.0.179] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-01-12T20:52:33.479+01:00 DEBUG 6400 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : DELETE "/api/videos/13", parameters={}
+2025-01-12T20:52:33.480+01:00 DEBUG 6400 --- [http-nio-8089-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to univ_rouen.fr.Insta_lite.controllers.VideoController#deleteVideo(Long)
+2025-01-12T20:52:33.623+01:00 DEBUG 6400 --- [http-nio-8089-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-01-12T20:52:33.623+01:00 DEBUG 6400 --- [http-nio-8089-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2025-01-12T20:52:33.626+01:00 DEBUG 6400 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 204 NO_CONTENT
+2025-01-12T20:53:02.723+01:00 DEBUG 6400 --- [http-nio-8089-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/api/videos", parameters={}
+2025-01-12T20:53:02.726+01:00 DEBUG 6400 --- [http-nio-8089-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to univ_rouen.fr.Insta_lite.controllers.VideoController#getAllVideos()
+2025-01-12T20:53:02.772+01:00 DEBUG 6400 --- [http-nio-8089-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/hal+json', given [application/hal+json] and supported [application/json, application/*+json]
+2025-01-12T20:53:02.772+01:00 DEBUG 6400 --- [http-nio-8089-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Writing [[]]
+2025-01-12T20:53:02.781+01:00 DEBUG 6400 --- [http-nio-8089-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-12T20:53:04.755+01:00 DEBUG 6400 --- [http-nio-8089-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/api/videos", parameters={}
+2025-01-12T20:53:04.756+01:00 DEBUG 6400 --- [http-nio-8089-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to univ_rouen.fr.Insta_lite.controllers.VideoController#getAllVideos()
+2025-01-12T20:53:04.765+01:00 DEBUG 6400 --- [http-nio-8089-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/hal+json', given [application/hal+json] and supported [application/json, application/*+json]
+2025-01-12T20:53:04.765+01:00 DEBUG 6400 --- [http-nio-8089-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Writing [[]]
+2025-01-12T20:53:04.768+01:00 DEBUG 6400 --- [http-nio-8089-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-12T20:53:05.388+01:00 DEBUG 6400 --- [http-nio-8089-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/api/videos", parameters={}
+2025-01-12T20:53:05.388+01:00 DEBUG 6400 --- [http-nio-8089-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to univ_rouen.fr.Insta_lite.controllers.VideoController#getAllVideos()
+2025-01-12T20:53:05.395+01:00 DEBUG 6400 --- [http-nio-8089-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/hal+json', given [application/hal+json] and supported [application/json, application/*+json]
+2025-01-12T20:53:05.395+01:00 DEBUG 6400 --- [http-nio-8089-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Writing [[]]
+2025-01-12T20:53:05.396+01:00 DEBUG 6400 --- [http-nio-8089-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-12T20:53:14.428+01:00 DEBUG 6400 --- [http-nio-8089-exec-6] o.s.web.servlet.DispatcherServlet        : POST "/api/videos", parameters={multipart}
+2025-01-12T20:53:14.486+01:00 DEBUG 6400 --- [http-nio-8089-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to univ_rouen.fr.Insta_lite.controllers.VideoController#uploadVideo(MultipartFile, Long, Visibility)
+2025-01-12T20:53:14.491+01:00  INFO 6400 --- [http-nio-8089-exec-6] u.f.I.controllers.VideoController        : Début de l'upload de vidéo par l'utilisateur ID : 26
+2025-01-12T20:53:14.491+01:00  INFO 6400 --- [http-nio-8089-exec-6] u.f.I.controllers.VideoController        : Nom original du fichier : video1.mp4
+2025-01-12T20:53:14.491+01:00 DEBUG 6400 --- [http-nio-8089-exec-6] u.f.I.controllers.VideoController        : Données du DTO avant sauvegarde : univ_rouen.fr.Insta_lite.dtos.VideoRequestDTO@27973fd0
+2025-01-12T20:53:14.492+01:00  INFO 6400 --- [http-nio-8089-exec-6] u.f.I.services.VideoServiceImpl          : Début du processus d'upload de vidéo...
+2025-01-12T20:53:14.492+01:00 DEBUG 6400 --- [http-nio-8089-exec-6] u.f.I.services.VideoServiceImpl          : Données du DTO : univ_rouen.fr.Insta_lite.dtos.VideoRequestDTO@27973fd0
+2025-01-12T20:53:14.511+01:00  INFO 6400 --- [http-nio-8089-exec-6] u.f.I.services.VideoServiceImpl          : Fichier copié avec succès : \data\app\videos\video1.mp4
+2025-01-12T20:53:14.511+01:00 DEBUG 6400 --- [http-nio-8089-exec-6] u.f.I.services.VideoServiceImpl          : Path set: /videos/video1.mp4
+2025-01-12T20:53:14.511+01:00 DEBUG 6400 --- [http-nio-8089-exec-6] u.f.I.services.VideoServiceImpl          : Size set: 1055736
+2025-01-12T20:53:14.535+01:00  INFO 6400 --- [http-nio-8089-exec-6] net.bramp.ffmpeg.RunProcessFunction      : C:/ffmpeg/bin/ffprobe -version
+2025-01-12T20:53:14.578+01:00  INFO 6400 --- [http-nio-8089-exec-6] net.bramp.ffmpeg.RunProcessFunction      : C:/ffmpeg/bin/ffprobe -v quiet -print_format json -show_error -show_format -show_streams -show_chapters \data\app\videos\video1.mp4
+2025-01-12T20:53:14.656+01:00  INFO 6400 --- [http-nio-8089-exec-6] net.bramp.ffmpeg.RunProcessFunction      : C:/ffmpeg/bin/ffprobe -version
+2025-01-12T20:53:14.695+01:00  INFO 6400 --- [http-nio-8089-exec-6] net.bramp.ffmpeg.RunProcessFunction      : C:/ffmpeg/bin/ffprobe -v quiet -print_format json -show_error -show_format -show_streams -show_chapters \data\app\videos\video1.mp4
+2025-01-12T20:53:14.750+01:00 DEBUG 6400 --- [http-nio-8089-exec-6] u.f.I.services.VideoServiceImpl          : Duration set: 00:00:05
+2025-01-12T20:53:14.750+01:00 DEBUG 6400 --- [http-nio-8089-exec-6] u.f.I.services.VideoServiceImpl          : Données du DTO après mapping : univ_rouen.fr.Insta_lite.dtos.VideoRequestDTO@27973fd0
+2025-01-12T20:53:14.752+01:00 DEBUG 6400 --- [http-nio-8089-exec-6] u.f.I.services.VideoServiceImpl          : Vidéo avant sauvegarde : univ_rouen.fr.Insta_lite.models.Video@73d23487
+2025-01-12T20:53:14.776+01:00  INFO 6400 --- [http-nio-8089-exec-6] u.f.I.services.VideoServiceImpl          : Vidéo sauvegardée avec succès : univ_rouen.fr.Insta_lite.models.Video@73d23487
+2025-01-12T20:53:14.777+01:00  INFO 6400 --- [http-nio-8089-exec-6] u.f.I.controllers.VideoController        : Vidéo téléchargée avec succès pour l'utilisateur ID : 26
+2025-01-12T20:53:14.777+01:00 DEBUG 6400 --- [http-nio-8089-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2025-01-12T20:53:14.777+01:00 DEBUG 6400 --- [http-nio-8089-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["vidéo téléchargée avec succès."]
+2025-01-12T20:53:14.780+01:00 DEBUG 6400 --- [http-nio-8089-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-12T20:53:49.459+01:00 DEBUG 6400 --- [http-nio-8089-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/api/videos", parameters={}
+2025-01-12T20:53:49.459+01:00 DEBUG 6400 --- [http-nio-8089-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to univ_rouen.fr.Insta_lite.controllers.VideoController#getAllVideos()
+2025-01-12T20:53:49.473+01:00 DEBUG 6400 --- [http-nio-8089-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/hal+json', given [application/hal+json] and supported [application/json, application/*+json]
+2025-01-12T20:53:49.473+01:00 DEBUG 6400 --- [http-nio-8089-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Writing [[univ_rouen.fr.Insta_lite.dtos.VideoResponseDTO@16f00c26]]
+2025-01-12T20:53:49.477+01:00 DEBUG 6400 --- [http-nio-8089-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-12T20:55:12.953+01:00 DEBUG 6400 --- [http-nio-8089-exec-8] o.s.web.servlet.DispatcherServlet        : DELETE "/api/videos/14", parameters={}
+2025-01-12T20:55:12.954+01:00 DEBUG 6400 --- [http-nio-8089-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to univ_rouen.fr.Insta_lite.controllers.VideoController#deleteVideo(Long)
+2025-01-12T20:55:12.969+01:00 DEBUG 6400 --- [http-nio-8089-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-01-12T20:55:12.969+01:00 DEBUG 6400 --- [http-nio-8089-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2025-01-12T20:55:12.969+01:00 DEBUG 6400 --- [http-nio-8089-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 204 NO_CONTENT
+2025-01-12T20:55:17.965+01:00 DEBUG 6400 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/api/videos", parameters={}
+2025-01-12T20:55:17.966+01:00 DEBUG 6400 --- [http-nio-8089-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to univ_rouen.fr.Insta_lite.controllers.VideoController#getAllVideos()
+2025-01-12T20:55:17.971+01:00 DEBUG 6400 --- [http-nio-8089-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/hal+json', given [application/hal+json] and supported [application/json, application/*+json]
+2025-01-12T20:55:17.972+01:00 DEBUG 6400 --- [http-nio-8089-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Writing [[]]
+2025-01-12T20:55:17.973+01:00 DEBUG 6400 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-12T20:55:21.743+01:00  INFO 6400 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-12T20:55:21.747+01:00  INFO 6400 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-12T20:55:21.753+01:00  INFO 6400 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

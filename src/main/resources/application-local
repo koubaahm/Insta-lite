@@ -17,13 +17,6 @@ server.port=8089
 logging.level.root=INFO
 logging.level.org.springframework.web=DEBUG
 logging.level.univ_rouen.fr.Insta_lite=debug
-logging.file.name=/logs/app.log
-
-
-#FFMPEG pour docker
-ffmpeg.ffprobe-path=/usr/bin/ffprobe
-
-
 
 # Configuration Google OAuth2
 spring.security.oauth2.client.registration.google.client-id=185002478243-r896h40o71nimn3km4sh4a95f24g5gr7.apps.googleusercontent.com
@@ -31,11 +24,11 @@ spring.security.oauth2.client.registration.google.client-secret=GOCSPX-6QR5kqpyo
 spring.security.oauth2.client.registration.google.redirect-uri=http://localhost:8089/login/oauth2/code/google
 spring.security.oauth2.client.registration.google.scope=email,profile
 spring.security.oauth2.client.provider.google.authorization-uri=https://accounts.google.com/o/oauth2/auth
-
 spring.security.oauth2.client.provider.google.token-uri=https://oauth2.googleapis.com/token
 spring.security.oauth2.client.provider.google.user-info-uri=https://www.googleapis.com/oauth2/v3/userinfo
 spring.security.oauth2.client.provider.google.user-name-attribute=sub
 
+# Configuration SMTP
 spring.mail.host=smtp.gmail.com
 spring.mail.port=587
 spring.mail.username=amedkoubaa@gmail.com
@@ -43,22 +36,24 @@ spring.mail.password=iwmo jram vlwo llcy
 spring.mail.properties.mail.smtp.auth=true
 spring.mail.properties.mail.smtp.starttls.enable=true
 
+# JWT Secret Key
 JWT_SECRET_KEY=N2Y4ZjhhMjM1OGEyMzZkYzk1MjRlNzRlZGQ3NjVhYzc4ODc3NjgwMGE=
 
+# Upload Configuration
 spring.servlet.multipart.max-file-size=50MB
 spring.servlet.multipart.max-request-size=50MB
 
-
-image.directory=/data/app/images
-video.directory=/data/app/videos
-
-
+# Swagger Configuration
 springdoc.swagger-ui.path=/swagger-ui.html
 
 
 
+# Journalisation
+logging.file.name=logs/app-local.log
 
+# Chemin vers ffprobe
+ffmpeg.ffprobe-path=C:/ffmpeg/bin/ffprobe
 
-
-
-
+# Dossiers d'images et vidéos
+image.directory=src/main/resources/static/images
+video.directory=src/main/resources/static/videos

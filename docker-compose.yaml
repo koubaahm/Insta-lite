@@ -38,10 +38,19 @@ services:
     container_name: springboot-instaLite
     ports:
       - "8089:8089"
+    volumes:
+      - ./images:/data/app/images
+      - ./videos:/data/app/videos
+      - ./logs:/logs
     environment:
       SPRING_DATASOURCE_URL: jdbc:postgresql://postgres-instaLite:5432/insta-lite-db
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: 123
+      image.directory: /data/app/images
+      video.directory: /data/app/videos
+      SPRING_PROFILES_ACTIVE: docker
+
+
     networks:
       - instaLite_network
     depends_on:

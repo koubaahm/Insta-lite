@@ -37,6 +37,19 @@ public class SecurityConfig {
         this.oauth2SuccessHandler = oauth2SuccessHandler;
         this.formLoginSuccessHandler = formLoginSuccessHandler;
     }
+    @Bean
+    public org.springframework.web.cors.CorsConfigurationSource corsConfigurationSource() {
+        org.springframework.web.cors.CorsConfiguration configuration = new org.springframework.web.cors.CorsConfiguration();
+        configuration.addAllowedOrigin("http://localhost:4200");
+        configuration.addAllowedMethod("*");
+        configuration.addAllowedHeader("*");
+        configuration.setAllowCredentials(true);
+
+        org.springframework.web.cors.UrlBasedCorsConfigurationSource source = new org.springframework.web.cors.UrlBasedCorsConfigurationSource();
+        source.registerCorsConfiguration("/**", configuration);
+        return source;
+    }
+
 
     @Bean
     public AuthenticationManager authenticationManager(HttpSecurity http) throws Exception {
@@ -63,9 +76,10 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
-                .csrf(AbstractHttpConfigurer::disable)
+                .cors(cors -> cors.configurationSource(corsConfigurationSource())) // Ajouter CORS
+                .csrf(AbstractHttpConfigurer::disable) // Désactiver CSRF si nécessaire
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/swagger-ui/**", "/v3/api-docs/**","/oauth2/authorization/google", "/login/oauth2/code/google", "/api/**")
+                        .requestMatchers("/swagger-ui/**", "/v3/api-docs/**", "/oauth2/authorization/google", "/login/oauth2/code/google", "/api/**")
                         .permitAll()
                         .anyRequest().authenticated()
                 )
@@ -90,6 +104,7 @@ public class SecurityConfig {
 
         return http.build();
     }
+
 
 }
 
