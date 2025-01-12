@@ -46,6 +46,23 @@ public class Comment {
         this.video = video;
     }
 
+    public Comment(String content, LocalDateTime createdAt, AppUser createdBy, Image image) {
+        this.content = content;
+        this.createdAt = createdAt;
+        this.createdBy = createdBy;
+        this.image = image;
+        this.video = null;
+    }
+
+    public Comment(String content, LocalDateTime createdAt, AppUser createdBy, Video video) {
+        this.content = content;
+        this.createdAt = createdAt;
+        this.createdBy = createdBy;
+        this.video = video;
+        this.image = null;
+    }
+
+
     public Long getId() {
         return id;
     }

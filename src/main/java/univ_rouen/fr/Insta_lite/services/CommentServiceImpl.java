@@ -86,7 +86,7 @@ public class CommentServiceImpl implements CommentService {
     @Override
     public List<CommentResponseDTO> getCommentsByImageId(Long imageId) {
         List<Comment> comments = commentRepository.findByImageId(imageId);
-        
+
         return comments.stream()
                 .map(commentMapper::convertToDTO)
                 .collect(Collectors.toList());
