@@ -27,11 +27,17 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public AppUserResponseDTO add(AppUserRequestDTO userDTO) {
-        AppUser user = userMapper.toEntity(userDTO);
-        user.setPassword(passwordEncoder.encode(userDTO.getPassword()));
-        user = userRepository.save(user);
-        return userMapper.toDTO(user);
+
+        if (userRepository.findByEmail(userDTO.getEmail()).isPresent()) {
+
+            throw new IllegalArgumentException("un utilisateur existe déjà avec cet email : " + userDTO.getEmail());
+        }
+            AppUser user = userMapper.toEntity(userDTO);
+            user.setPassword(passwordEncoder.encode(userDTO.getPassword()));
+            user = userRepository.save(user);
+            return userMapper.toDTO(user);
     }
+
 
     @Override
     public AppUserResponseDTO get(Long id) {

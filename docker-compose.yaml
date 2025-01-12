@@ -1,0 +1,61 @@
+version: '3.8'
+
+services:
+  # postgres
+  postgresdb:
+    image: postgres:latest
+    container_name: postgres-instaLite
+    environment:
+      POSTGRES_DB: insta-lite-db
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: 123
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - instaLite_network
+
+  # pgAdmin
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: pgadmin-instaLite
+    environment:
+      PGADMIN_DEFAULT_EMAIL: instalite@admin.com
+      PGADMIN_DEFAULT_PASSWORD: admin123
+    ports:
+      - "5050:80"
+    networks:
+      - instaLite_network
+    depends_on:
+      - postgresdb
+
+  # Spring Boot App
+  springboot-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: springboot-instaLite
+    ports:
+      - "8089:8089"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres-instaLite:5432/insta-lite-db
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: 123
+    networks:
+      - instaLite_network
+    depends_on:
+      - postgresdb
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8089/actuator/health"]
+      interval: 30s
+      retries: 3
+      timeout: 10s
+      start_period: 10s
+
+networks:
+  instaLite_network:
+    driver: bridge
+
+volumes:
+  postgres_data:
