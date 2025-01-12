@@ -27,6 +27,14 @@ public class Comment {
     @JoinColumn(name = "video_id", nullable = true)
     private Video video;
 
+    @PrePersist
+    @PreUpdate
+    private void validateCommentAssociation() {
+        if (image != null && video != null) {
+            throw new IllegalStateException("le commentaire ne peut pas être associé à la fois à une image et une vidéo.");
+        }
+    }
+
     public Comment() {
     }
 
