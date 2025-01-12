@@ -14,4 +14,8 @@ public interface CommentService {
     Optional<CommentResponseDTO> getCommentById(Long id);
     CommentResponseDTO updateComment(Long id, CommentRequestDTO commentDTO);
     void deleteCommentById(Long id);
+    List<CommentResponseDTO> getCommentsByImageId(Long imageId);
+
+    List<CommentResponseDTO> getCommentsByVideoId(Long videoId);
+
 }

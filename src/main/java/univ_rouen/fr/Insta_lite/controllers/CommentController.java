@@ -74,4 +74,18 @@ public class CommentController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
+
+    //liste des commentaires pour une image
+    @GetMapping("/image/{imageId}")
+    public ResponseEntity<List<CommentResponseDTO>> getCommentsByImageId(@PathVariable Long imageId) {
+        List<CommentResponseDTO> comments = commentService.getCommentsByImageId(imageId);
+        return ResponseEntity.ok(comments);
+    }
+
+    //liste des commentaires pour une video
+    @GetMapping("/video/{videoId}")
+    public ResponseEntity<List<CommentResponseDTO>> getCommentsByVideoId(@PathVariable Long videoId) {
+        List<CommentResponseDTO> comments = commentService.getCommentsByVideoId(videoId);
+        return ResponseEntity.ok(comments);
+    }
 }
