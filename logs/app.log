@@ -8244,3 +8244,724 @@ java.lang.RuntimeException: Fichier non trouvé: lion.jpg
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.33.jar!/:na]
 	at java.base/java.lang.Thread.run(Thread.java:1575) ~[na:na]
 
+2025-01-12T22:09:54.111Z DEBUG 1 --- [http-nio-8089-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/api/users", parameters={}
+2025-01-12T22:09:54.112Z DEBUG 1 --- [http-nio-8089-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to univ_rouen.fr.Insta_lite.controllers.UserController#getAllUsers()
+2025-01-12T22:09:54.131Z DEBUG 1 --- [http-nio-8089-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-01-12T22:09:54.131Z DEBUG 1 --- [http-nio-8089-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[univ_rouen.fr.Insta_lite.dtos.AppUserResponseDTO@165e91f, univ_rouen.fr.Insta_lite.dtos.AppUserResp (truncated)...]
+2025-01-12T22:09:54.133Z DEBUG 1 --- [http-nio-8089-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-12T22:17:36.048Z DEBUG 1 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/api/users", parameters={}
+2025-01-12T22:17:36.049Z DEBUG 1 --- [http-nio-8089-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to univ_rouen.fr.Insta_lite.controllers.UserController#getAllUsers()
+2025-01-12T22:17:36.072Z DEBUG 1 --- [http-nio-8089-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-01-12T22:17:36.073Z DEBUG 1 --- [http-nio-8089-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[univ_rouen.fr.Insta_lite.dtos.AppUserResponseDTO@58d77625, univ_rouen.fr.Insta_lite.dtos.AppUserRes (truncated)...]
+2025-01-12T22:17:36.075Z DEBUG 1 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-12T22:17:36.123Z DEBUG 1 --- [http-nio-8089-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/api/users/34", parameters={}
+2025-01-12T22:17:36.124Z DEBUG 1 --- [http-nio-8089-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to univ_rouen.fr.Insta_lite.controllers.UserController#getUser(Long)
+2025-01-12T22:17:36.128Z DEBUG 1 --- [http-nio-8089-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-01-12T22:17:36.129Z DEBUG 1 --- [http-nio-8089-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [univ_rouen.fr.Insta_lite.dtos.AppUserResponseDTO@3360e42]
+2025-01-12T22:17:36.130Z DEBUG 1 --- [http-nio-8089-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-12T22:17:43.146Z DEBUG 1 --- [http-nio-8089-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/api/users/34", parameters={}
+2025-01-12T22:17:43.148Z DEBUG 1 --- [http-nio-8089-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to univ_rouen.fr.Insta_lite.controllers.UserController#getUser(Long)
+2025-01-12T22:17:43.158Z DEBUG 1 --- [http-nio-8089-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-01-12T22:17:43.159Z DEBUG 1 --- [http-nio-8089-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [univ_rouen.fr.Insta_lite.dtos.AppUserResponseDTO@2b3db52e]
+2025-01-12T22:17:43.161Z DEBUG 1 --- [http-nio-8089-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-12T22:18:07.185Z DEBUG 1 --- [http-nio-8089-exec-8] o.s.web.servlet.DispatcherServlet        : POST "/api/images/upload", parameters={multipart}
+2025-01-12T22:18:07.307Z DEBUG 1 --- [http-nio-8089-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to univ_rouen.fr.Insta_lite.controllers.ImageController#createImage(MultipartFile, Visibility, Long)
+2025-01-12T22:18:07.518Z DEBUG 1 --- [http-nio-8089-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-01-12T22:18:07.518Z DEBUG 1 --- [http-nio-8089-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [univ_rouen.fr.Insta_lite.dtos.ImageResponseDTO@6c601948]
+2025-01-12T22:18:07.520Z DEBUG 1 --- [http-nio-8089-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 201 CREATED
+2025-01-12T22:18:10.527Z DEBUG 1 --- [http-nio-8089-exec-4] o.s.web.servlet.DispatcherServlet        : POST "/api/images/upload", parameters={multipart}
+2025-01-12T22:18:10.592Z DEBUG 1 --- [http-nio-8089-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to univ_rouen.fr.Insta_lite.controllers.ImageController#createImage(MultipartFile, Visibility, Long)
+2025-01-12T22:18:10.596Z DEBUG 1 --- [http-nio-8089-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-01-12T22:18:10.597Z DEBUG 1 --- [http-nio-8089-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2025-01-12T22:18:10.597Z DEBUG 1 --- [http-nio-8089-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 500 INTERNAL_SERVER_ERROR
+2025-01-12T22:18:55.673Z DEBUG 1 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/api/users/34", parameters={}
+2025-01-12T22:18:55.674Z DEBUG 1 --- [http-nio-8089-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/api/images/user/34", parameters={}
+2025-01-12T22:18:55.674Z DEBUG 1 --- [http-nio-8089-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to univ_rouen.fr.Insta_lite.controllers.UserController#getUser(Long)
+2025-01-12T22:18:55.675Z DEBUG 1 --- [http-nio-8089-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to univ_rouen.fr.Insta_lite.controllers.ImageController#getImagesByUserId(Long)
+2025-01-12T22:18:55.681Z DEBUG 1 --- [http-nio-8089-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-01-12T22:18:55.681Z DEBUG 1 --- [http-nio-8089-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-01-12T22:18:55.682Z DEBUG 1 --- [http-nio-8089-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [univ_rouen.fr.Insta_lite.dtos.AppUserResponseDTO@7388983]
+2025-01-12T22:18:55.682Z DEBUG 1 --- [http-nio-8089-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[univ_rouen.fr.Insta_lite.dtos.ImageResponseDTO@3b015762]]
+2025-01-12T22:18:55.683Z DEBUG 1 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-12T22:18:55.683Z DEBUG 1 --- [http-nio-8089-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-12T22:18:55.684Z DEBUG 1 --- [http-nio-8089-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/api/videos/user/34", parameters={}
+2025-01-12T22:18:55.685Z DEBUG 1 --- [http-nio-8089-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to univ_rouen.fr.Insta_lite.controllers.VideoController#getVideosByUserId(Long)
+2025-01-12T22:18:55.690Z DEBUG 1 --- [http-nio-8089-exec-6] o.s.web.servlet.DispatcherServlet        : Failed to complete request: java.lang.RuntimeException: aucune video trouvée pour l'utilisateur avec son id : 34
+2025-01-12T22:18:55.693Z ERROR 1 --- [http-nio-8089-exec-6] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException: aucune video trouvée pour l'utilisateur avec son id : 34] with root cause
+
+java.lang.RuntimeException: aucune video trouvée pour l'utilisateur avec son id : 34
+	at univ_rouen.fr.Insta_lite.services.VideoServiceImpl.getVideosByUserId(VideoServiceImpl.java:153) ~[!/:0.0.1-SNAPSHOT]
+	at univ_rouen.fr.Insta_lite.controllers.VideoController.getVideosByUserId(VideoController.java:144) ~[!/:0.0.1-SNAPSHOT]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.15.jar!/:6.1.15]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.15.jar!/:6.1.15]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.15.jar!/:6.1.15]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.15.jar!/:6.1.15]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.15.jar!/:6.1.15]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.15.jar!/:6.1.15]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.15.jar!/:6.1.15]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.1.15.jar!/:6.1.15]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.15.jar!/:6.1.15]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.33.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at univ_rouen.fr.Insta_lite.security.CorsFilter.doFilter(CorsFilter.java:30) ~[!/:0.0.1-SNAPSHOT]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$FilterObservation$SimpleFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:479) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:340) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator.lambda$wrapSecured$0(ObservationFilterChainDecorator.java:82) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:128) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter.doFilterInternal(OAuth2AuthorizationRequestRedirectFilter.java:198) ~[spring-security-oauth2-client-6.3.5.jar!/:6.3.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:323) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:224) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195) ~[spring-webmvc-6.1.15.jar!/:6.1.15]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230) ~[spring-security-config-6.3.5.jar!/:6.3.5]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:113) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:1575) ~[na:na]
+
+2025-01-12T22:18:55.704Z DEBUG 1 --- [http-nio-8089-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/api/images/image/1213.jpg", parameters={}
+2025-01-12T22:18:55.705Z DEBUG 1 --- [http-nio-8089-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to univ_rouen.fr.Insta_lite.controllers.ImageController#getImage(String)
+2025-01-12T22:18:55.712Z DEBUG 1 --- [http-nio-8089-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Found 'Content-Type:image/jpeg' in response
+2025-01-12T22:18:55.713Z DEBUG 1 --- [http-nio-8089-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [file [/data/app/images/1213.jpg]]
+2025-01-12T22:18:55.803Z DEBUG 1 --- [http-nio-8089-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-12T22:20:01.600Z DEBUG 1 --- [http-nio-8089-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/api/images/user/34", parameters={}
+2025-01-12T22:20:01.600Z DEBUG 1 --- [http-nio-8089-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/api/videos/user/34", parameters={}
+2025-01-12T22:20:01.601Z DEBUG 1 --- [http-nio-8089-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to univ_rouen.fr.Insta_lite.controllers.VideoController#getVideosByUserId(Long)
+2025-01-12T22:20:01.601Z DEBUG 1 --- [http-nio-8089-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to univ_rouen.fr.Insta_lite.controllers.ImageController#getImagesByUserId(Long)
+2025-01-12T22:20:01.601Z DEBUG 1 --- [http-nio-8089-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/api/users/34", parameters={}
+2025-01-12T22:20:01.602Z DEBUG 1 --- [http-nio-8089-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to univ_rouen.fr.Insta_lite.controllers.UserController#getUser(Long)
+2025-01-12T22:20:01.607Z DEBUG 1 --- [http-nio-8089-exec-6] o.s.web.servlet.DispatcherServlet        : Failed to complete request: java.lang.RuntimeException: aucune video trouvée pour l'utilisateur avec son id : 34
+2025-01-12T22:20:01.608Z DEBUG 1 --- [http-nio-8089-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-01-12T22:20:01.608Z DEBUG 1 --- [http-nio-8089-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[univ_rouen.fr.Insta_lite.dtos.ImageResponseDTO@50f2f1f7]]
+2025-01-12T22:20:01.608Z ERROR 1 --- [http-nio-8089-exec-6] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException: aucune video trouvée pour l'utilisateur avec son id : 34] with root cause
+
+java.lang.RuntimeException: aucune video trouvée pour l'utilisateur avec son id : 34
+	at univ_rouen.fr.Insta_lite.services.VideoServiceImpl.getVideosByUserId(VideoServiceImpl.java:153) ~[!/:0.0.1-SNAPSHOT]
+	at univ_rouen.fr.Insta_lite.controllers.VideoController.getVideosByUserId(VideoController.java:144) ~[!/:0.0.1-SNAPSHOT]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.15.jar!/:6.1.15]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.15.jar!/:6.1.15]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.15.jar!/:6.1.15]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.15.jar!/:6.1.15]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.15.jar!/:6.1.15]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.15.jar!/:6.1.15]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.15.jar!/:6.1.15]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.1.15.jar!/:6.1.15]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.15.jar!/:6.1.15]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.33.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at univ_rouen.fr.Insta_lite.security.CorsFilter.doFilter(CorsFilter.java:30) ~[!/:0.0.1-SNAPSHOT]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$FilterObservation$SimpleFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:479) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:340) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator.lambda$wrapSecured$0(ObservationFilterChainDecorator.java:82) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:128) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter.doFilterInternal(OAuth2AuthorizationRequestRedirectFilter.java:198) ~[spring-security-oauth2-client-6.3.5.jar!/:6.3.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:323) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:224) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195) ~[spring-webmvc-6.1.15.jar!/:6.1.15]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230) ~[spring-security-config-6.3.5.jar!/:6.3.5]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:113) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:1575) ~[na:na]
+
+2025-01-12T22:20:01.610Z DEBUG 1 --- [http-nio-8089-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-12T22:20:01.610Z DEBUG 1 --- [http-nio-8089-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-01-12T22:20:01.611Z DEBUG 1 --- [http-nio-8089-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [univ_rouen.fr.Insta_lite.dtos.AppUserResponseDTO@59e4cfcd]
+2025-01-12T22:20:01.613Z DEBUG 1 --- [http-nio-8089-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-12T22:22:42.352Z DEBUG 1 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/api/videos/user/34", parameters={}
+2025-01-12T22:22:42.352Z DEBUG 1 --- [http-nio-8089-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/api/images/user/34", parameters={}
+2025-01-12T22:22:42.353Z DEBUG 1 --- [http-nio-8089-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to univ_rouen.fr.Insta_lite.controllers.VideoController#getVideosByUserId(Long)
+2025-01-12T22:22:42.353Z DEBUG 1 --- [http-nio-8089-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to univ_rouen.fr.Insta_lite.controllers.ImageController#getImagesByUserId(Long)
+2025-01-12T22:22:42.353Z DEBUG 1 --- [http-nio-8089-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/api/users/34", parameters={}
+2025-01-12T22:22:42.354Z DEBUG 1 --- [http-nio-8089-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to univ_rouen.fr.Insta_lite.controllers.UserController#getUser(Long)
+2025-01-12T22:22:42.364Z DEBUG 1 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Failed to complete request: java.lang.RuntimeException: aucune video trouvée pour l'utilisateur avec son id : 34
+2025-01-12T22:22:42.367Z DEBUG 1 --- [http-nio-8089-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-01-12T22:22:42.368Z DEBUG 1 --- [http-nio-8089-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[univ_rouen.fr.Insta_lite.dtos.ImageResponseDTO@724b7a68]]
+2025-01-12T22:22:42.368Z DEBUG 1 --- [http-nio-8089-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-01-12T22:22:42.369Z DEBUG 1 --- [http-nio-8089-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [univ_rouen.fr.Insta_lite.dtos.AppUserResponseDTO@57eaa62]
+2025-01-12T22:22:42.370Z DEBUG 1 --- [http-nio-8089-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-12T22:22:42.371Z DEBUG 1 --- [http-nio-8089-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-12T22:22:42.367Z ERROR 1 --- [http-nio-8089-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException: aucune video trouvée pour l'utilisateur avec son id : 34] with root cause
+
+java.lang.RuntimeException: aucune video trouvée pour l'utilisateur avec son id : 34
+	at univ_rouen.fr.Insta_lite.services.VideoServiceImpl.getVideosByUserId(VideoServiceImpl.java:153) ~[!/:0.0.1-SNAPSHOT]
+	at univ_rouen.fr.Insta_lite.controllers.VideoController.getVideosByUserId(VideoController.java:144) ~[!/:0.0.1-SNAPSHOT]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.15.jar!/:6.1.15]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.15.jar!/:6.1.15]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.15.jar!/:6.1.15]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.15.jar!/:6.1.15]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.15.jar!/:6.1.15]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.15.jar!/:6.1.15]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.15.jar!/:6.1.15]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.1.15.jar!/:6.1.15]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.15.jar!/:6.1.15]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.33.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at univ_rouen.fr.Insta_lite.security.CorsFilter.doFilter(CorsFilter.java:30) ~[!/:0.0.1-SNAPSHOT]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$FilterObservation$SimpleFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:479) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:340) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator.lambda$wrapSecured$0(ObservationFilterChainDecorator.java:82) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:128) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter.doFilterInternal(OAuth2AuthorizationRequestRedirectFilter.java:198) ~[spring-security-oauth2-client-6.3.5.jar!/:6.3.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:323) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:224) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.3.5.jar!/:6.3.5]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195) ~[spring-webmvc-6.1.15.jar!/:6.1.15]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230) ~[spring-security-config-6.3.5.jar!/:6.3.5]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:113) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.33.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:1575) ~[na:na]
+
+2025-01-12T22:22:51.965Z DEBUG 1 --- [http-nio-8089-exec-10] o.s.web.servlet.DispatcherServlet        : POST "/api/videos", parameters={multipart}
+2025-01-12T22:22:51.989Z DEBUG 1 --- [http-nio-8089-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to univ_rouen.fr.Insta_lite.controllers.VideoController#uploadVideo(MultipartFile, Long, Visibility)
+2025-01-12T22:22:51.992Z  INFO 1 --- [http-nio-8089-exec-10] u.f.I.controllers.VideoController        : Début de l'upload de vidéo par l'utilisateur ID : 34
+2025-01-12T22:22:51.993Z  INFO 1 --- [http-nio-8089-exec-10] u.f.I.controllers.VideoController        : Nom original du fichier : video1.mp4
+2025-01-12T22:22:51.993Z DEBUG 1 --- [http-nio-8089-exec-10] u.f.I.controllers.VideoController        : Données du DTO avant sauvegarde : univ_rouen.fr.Insta_lite.dtos.VideoRequestDTO@5ec95efb
+2025-01-12T22:22:51.993Z  INFO 1 --- [http-nio-8089-exec-10] u.f.I.services.VideoServiceImpl          : Début du processus d'upload de vidéo...
+2025-01-12T22:22:51.994Z DEBUG 1 --- [http-nio-8089-exec-10] u.f.I.services.VideoServiceImpl          : Données du DTO : univ_rouen.fr.Insta_lite.dtos.VideoRequestDTO@5ec95efb
+2025-01-12T22:22:52.009Z  INFO 1 --- [http-nio-8089-exec-10] u.f.I.services.VideoServiceImpl          : Fichier copié avec succès : /data/app/videos/video1.mp4
+2025-01-12T22:22:52.009Z DEBUG 1 --- [http-nio-8089-exec-10] u.f.I.services.VideoServiceImpl          : Path set: /videos/video1.mp4
+2025-01-12T22:22:52.010Z DEBUG 1 --- [http-nio-8089-exec-10] u.f.I.services.VideoServiceImpl          : Size set: 1055736
+2025-01-12T22:22:52.145Z  INFO 1 --- [http-nio-8089-exec-10] net.bramp.ffmpeg.RunProcessFunction      : /usr/bin/ffprobe -version
+2025-01-12T22:22:52.457Z  INFO 1 --- [http-nio-8089-exec-10] net.bramp.ffmpeg.RunProcessFunction      : /usr/bin/ffprobe -v quiet -print_format json -show_error -show_format -show_streams -show_chapters /data/app/videos/video1.mp4
+2025-01-12T22:22:52.625Z  INFO 1 --- [http-nio-8089-exec-10] net.bramp.ffmpeg.RunProcessFunction      : /usr/bin/ffprobe -version
+2025-01-12T22:22:52.669Z  INFO 1 --- [http-nio-8089-exec-10] net.bramp.ffmpeg.RunProcessFunction      : /usr/bin/ffprobe -v quiet -print_format json -show_error -show_format -show_streams -show_chapters /data/app/videos/video1.mp4
+2025-01-12T22:22:52.731Z DEBUG 1 --- [http-nio-8089-exec-10] u.f.I.services.VideoServiceImpl          : Duration set: 00:00:05
+2025-01-12T22:22:52.732Z DEBUG 1 --- [http-nio-8089-exec-10] u.f.I.services.VideoServiceImpl          : Données du DTO après mapping : univ_rouen.fr.Insta_lite.dtos.VideoRequestDTO@5ec95efb
+2025-01-12T22:22:52.738Z DEBUG 1 --- [http-nio-8089-exec-10] u.f.I.services.VideoServiceImpl          : Vidéo avant sauvegarde : univ_rouen.fr.Insta_lite.models.Video@71d3cab9
+2025-01-12T22:22:52.754Z  INFO 1 --- [http-nio-8089-exec-10] u.f.I.services.VideoServiceImpl          : Vidéo sauvegardée avec succès : univ_rouen.fr.Insta_lite.models.Video@71d3cab9
+2025-01-12T22:22:52.755Z  INFO 1 --- [http-nio-8089-exec-10] u.f.I.controllers.VideoController        : Vidéo téléchargée avec succès pour l'utilisateur ID : 34
+2025-01-12T22:22:52.758Z DEBUG 1 --- [http-nio-8089-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2025-01-12T22:22:52.759Z DEBUG 1 --- [http-nio-8089-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["vidéo téléchargée avec succès."]
+2025-01-12T22:22:52.762Z DEBUG 1 --- [http-nio-8089-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-12T22:22:57.386Z DEBUG 1 --- [http-nio-8089-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/api/users/34", parameters={}
+2025-01-12T22:22:57.387Z DEBUG 1 --- [http-nio-8089-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to univ_rouen.fr.Insta_lite.controllers.UserController#getUser(Long)
+2025-01-12T22:22:57.397Z DEBUG 1 --- [http-nio-8089-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-01-12T22:22:57.397Z DEBUG 1 --- [http-nio-8089-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/api/images/user/34", parameters={}
+2025-01-12T22:22:57.398Z DEBUG 1 --- [http-nio-8089-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/api/videos/user/34", parameters={}
+2025-01-12T22:22:57.399Z DEBUG 1 --- [http-nio-8089-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to univ_rouen.fr.Insta_lite.controllers.ImageController#getImagesByUserId(Long)
+2025-01-12T22:22:57.398Z DEBUG 1 --- [http-nio-8089-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [univ_rouen.fr.Insta_lite.dtos.AppUserResponseDTO@42aeb056]
+2025-01-12T22:22:57.399Z DEBUG 1 --- [http-nio-8089-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to univ_rouen.fr.Insta_lite.controllers.VideoController#getVideosByUserId(Long)
+2025-01-12T22:22:57.401Z DEBUG 1 --- [http-nio-8089-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-12T22:22:57.405Z DEBUG 1 --- [http-nio-8089-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-01-12T22:22:57.405Z DEBUG 1 --- [http-nio-8089-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-01-12T22:22:57.406Z DEBUG 1 --- [http-nio-8089-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[univ_rouen.fr.Insta_lite.dtos.ImageResponseDTO@f6b2950]]
+2025-01-12T22:22:57.406Z DEBUG 1 --- [http-nio-8089-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[univ_rouen.fr.Insta_lite.dtos.VideoResponseDTO@24509b40]]
+2025-01-12T22:22:57.407Z DEBUG 1 --- [http-nio-8089-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-12T22:22:57.413Z DEBUG 1 --- [http-nio-8089-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-12T22:22:57.468Z DEBUG 1 --- [http-nio-8089-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/api/videos/view/video1.mp4", parameters={}
+2025-01-12T22:22:57.469Z DEBUG 1 --- [http-nio-8089-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to univ_rouen.fr.Insta_lite.controllers.VideoController#viewVideo(String)
+2025-01-12T22:22:57.487Z DEBUG 1 --- [http-nio-8089-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Found 'Content-Type:video/mp4' in response
+2025-01-12T22:22:57.488Z DEBUG 1 --- [http-nio-8089-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[org.springframework.core.io.support.ResourceRegion@77b9d1dd]]
+2025-01-12T22:22:57.558Z DEBUG 1 --- [http-nio-8089-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 206 PARTIAL_CONTENT
+2025-01-12T22:23:32.843Z DEBUG 1 --- [http-nio-8089-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/api/users", parameters={}
+2025-01-12T22:23:32.843Z DEBUG 1 --- [http-nio-8089-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to univ_rouen.fr.Insta_lite.controllers.UserController#getAllUsers()
+2025-01-12T22:23:32.871Z DEBUG 1 --- [http-nio-8089-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-01-12T22:23:32.871Z DEBUG 1 --- [http-nio-8089-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[univ_rouen.fr.Insta_lite.dtos.AppUserResponseDTO@20fd6231, univ_rouen.fr.Insta_lite.dtos.AppUserRes (truncated)...]
+2025-01-12T22:23:32.873Z DEBUG 1 --- [http-nio-8089-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-12T22:23:48.440Z DEBUG 1 --- [http-nio-8089-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/api/users", parameters={}
+2025-01-12T22:23:48.441Z DEBUG 1 --- [http-nio-8089-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to univ_rouen.fr.Insta_lite.controllers.UserController#getAllUsers()
+2025-01-12T22:23:48.470Z DEBUG 1 --- [http-nio-8089-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-01-12T22:23:48.471Z DEBUG 1 --- [http-nio-8089-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[univ_rouen.fr.Insta_lite.dtos.AppUserResponseDTO@4697deb0, univ_rouen.fr.Insta_lite.dtos.AppUserRes (truncated)...]
+2025-01-12T22:23:48.472Z DEBUG 1 --- [http-nio-8089-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-12T22:23:48.535Z DEBUG 1 --- [http-nio-8089-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/api/users/34", parameters={}
+2025-01-12T22:23:48.540Z DEBUG 1 --- [http-nio-8089-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to univ_rouen.fr.Insta_lite.controllers.UserController#getUser(Long)
+2025-01-12T22:23:48.553Z DEBUG 1 --- [http-nio-8089-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-01-12T22:23:48.555Z DEBUG 1 --- [http-nio-8089-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [univ_rouen.fr.Insta_lite.dtos.AppUserResponseDTO@56abbfdb]
+2025-01-12T22:23:48.556Z DEBUG 1 --- [http-nio-8089-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-12T22:24:04.114Z DEBUG 1 --- [http-nio-8089-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/api/auth/login?error", parameters={masked}
+2025-01-12T22:24:04.114Z DEBUG 1 --- [http-nio-8089-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/api/auth/login?error", parameters={masked}
+2025-01-12T22:24:04.116Z  WARN 1 --- [http-nio-8089-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2025-01-12T22:24:04.116Z  WARN 1 --- [http-nio-8089-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2025-01-12T22:24:04.117Z DEBUG 1 --- [http-nio-8089-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 405 METHOD_NOT_ALLOWED
+2025-01-12T22:24:04.117Z DEBUG 1 --- [http-nio-8089-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 405 METHOD_NOT_ALLOWED
+2025-01-12T22:24:05.508Z DEBUG 1 --- [http-nio-8089-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/api/auth/login?error", parameters={masked}
+2025-01-12T22:24:05.508Z  WARN 1 --- [http-nio-8089-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2025-01-12T22:24:05.509Z DEBUG 1 --- [http-nio-8089-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 405 METHOD_NOT_ALLOWED
+2025-01-12T22:24:08.920Z DEBUG 1 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/api/auth/login?error", parameters={masked}
+2025-01-12T22:24:08.920Z  WARN 1 --- [http-nio-8089-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2025-01-12T22:24:08.921Z DEBUG 1 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 405 METHOD_NOT_ALLOWED
+2025-01-12T22:24:12.581Z DEBUG 1 --- [http-nio-8089-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/api/users", parameters={}
+2025-01-12T22:24:12.582Z DEBUG 1 --- [http-nio-8089-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to univ_rouen.fr.Insta_lite.controllers.UserController#getAllUsers()
+2025-01-12T22:24:12.603Z DEBUG 1 --- [http-nio-8089-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-01-12T22:24:12.603Z DEBUG 1 --- [http-nio-8089-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[univ_rouen.fr.Insta_lite.dtos.AppUserResponseDTO@27df6a42, univ_rouen.fr.Insta_lite.dtos.AppUserRes (truncated)...]
+2025-01-12T22:24:12.604Z DEBUG 1 --- [http-nio-8089-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-12T22:24:12.651Z DEBUG 1 --- [http-nio-8089-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/api/users/34", parameters={}
+2025-01-12T22:24:12.652Z DEBUG 1 --- [http-nio-8089-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to univ_rouen.fr.Insta_lite.controllers.UserController#getUser(Long)
+2025-01-12T22:24:12.657Z DEBUG 1 --- [http-nio-8089-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-01-12T22:24:12.657Z DEBUG 1 --- [http-nio-8089-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [univ_rouen.fr.Insta_lite.dtos.AppUserResponseDTO@2131d1d9]
+2025-01-12T22:24:12.658Z DEBUG 1 --- [http-nio-8089-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-12T22:24:17.692Z DEBUG 1 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/api/images/user/34", parameters={}
+2025-01-12T22:24:17.692Z DEBUG 1 --- [http-nio-8089-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/api/users/34", parameters={}
+2025-01-12T22:24:17.693Z DEBUG 1 --- [http-nio-8089-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to univ_rouen.fr.Insta_lite.controllers.ImageController#getImagesByUserId(Long)
+2025-01-12T22:24:17.693Z DEBUG 1 --- [http-nio-8089-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to univ_rouen.fr.Insta_lite.controllers.UserController#getUser(Long)
+2025-01-12T22:24:17.699Z DEBUG 1 --- [http-nio-8089-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-01-12T22:24:17.699Z DEBUG 1 --- [http-nio-8089-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-01-12T22:24:17.699Z DEBUG 1 --- [http-nio-8089-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[univ_rouen.fr.Insta_lite.dtos.ImageResponseDTO@49d97d59]]
+2025-01-12T22:24:17.700Z DEBUG 1 --- [http-nio-8089-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [univ_rouen.fr.Insta_lite.dtos.AppUserResponseDTO@2ce17787]
+2025-01-12T22:24:17.701Z DEBUG 1 --- [http-nio-8089-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-12T22:24:17.701Z DEBUG 1 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-12T22:24:17.710Z DEBUG 1 --- [http-nio-8089-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/api/videos/user/34", parameters={}
+2025-01-12T22:24:17.711Z DEBUG 1 --- [http-nio-8089-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to univ_rouen.fr.Insta_lite.controllers.VideoController#getVideosByUserId(Long)
+2025-01-12T22:24:17.719Z DEBUG 1 --- [http-nio-8089-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-01-12T22:24:17.719Z DEBUG 1 --- [http-nio-8089-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[univ_rouen.fr.Insta_lite.dtos.VideoResponseDTO@4d6f8f8c]]
+2025-01-12T22:24:17.720Z DEBUG 1 --- [http-nio-8089-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/api/images/image/1213.jpg", parameters={}
+2025-01-12T22:24:17.720Z DEBUG 1 --- [http-nio-8089-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-12T22:24:17.721Z DEBUG 1 --- [http-nio-8089-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to univ_rouen.fr.Insta_lite.controllers.ImageController#getImage(String)
+2025-01-12T22:24:17.723Z DEBUG 1 --- [http-nio-8089-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Found 'Content-Type:image/jpeg' in response
+2025-01-12T22:24:17.723Z DEBUG 1 --- [http-nio-8089-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [file [/data/app/images/1213.jpg]]
+2025-01-12T22:24:17.848Z DEBUG 1 --- [http-nio-8089-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-12T22:24:28.534Z DEBUG 1 --- [http-nio-8089-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/api/users", parameters={}
+2025-01-12T22:24:28.534Z DEBUG 1 --- [http-nio-8089-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to univ_rouen.fr.Insta_lite.controllers.UserController#getAllUsers()
+2025-01-12T22:24:28.558Z DEBUG 1 --- [http-nio-8089-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-01-12T22:24:28.559Z DEBUG 1 --- [http-nio-8089-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[univ_rouen.fr.Insta_lite.dtos.AppUserResponseDTO@108558be, univ_rouen.fr.Insta_lite.dtos.AppUserRes (truncated)...]
+2025-01-12T22:24:28.561Z DEBUG 1 --- [http-nio-8089-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-12T22:24:28.607Z DEBUG 1 --- [http-nio-8089-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/api/users/34", parameters={}
+2025-01-12T22:24:28.608Z DEBUG 1 --- [http-nio-8089-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to univ_rouen.fr.Insta_lite.controllers.UserController#getUser(Long)
+2025-01-12T22:24:28.616Z DEBUG 1 --- [http-nio-8089-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-01-12T22:24:28.616Z DEBUG 1 --- [http-nio-8089-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [univ_rouen.fr.Insta_lite.dtos.AppUserResponseDTO@e7386d5]
+2025-01-12T22:24:28.617Z DEBUG 1 --- [http-nio-8089-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-12T22:24:45.438Z DEBUG 1 --- [http-nio-8089-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/api/images/user/34", parameters={}
+2025-01-12T22:24:45.438Z DEBUG 1 --- [http-nio-8089-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/api/users/34", parameters={}
+2025-01-12T22:24:45.438Z DEBUG 1 --- [http-nio-8089-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to univ_rouen.fr.Insta_lite.controllers.ImageController#getImagesByUserId(Long)
+2025-01-12T22:24:45.439Z DEBUG 1 --- [http-nio-8089-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to univ_rouen.fr.Insta_lite.controllers.UserController#getUser(Long)
+2025-01-12T22:24:45.439Z DEBUG 1 --- [http-nio-8089-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/api/videos/user/34", parameters={}
+2025-01-12T22:24:45.440Z DEBUG 1 --- [http-nio-8089-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to univ_rouen.fr.Insta_lite.controllers.VideoController#getVideosByUserId(Long)
+2025-01-12T22:24:45.444Z DEBUG 1 --- [http-nio-8089-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-01-12T22:24:45.444Z DEBUG 1 --- [http-nio-8089-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-01-12T22:24:45.444Z DEBUG 1 --- [http-nio-8089-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[univ_rouen.fr.Insta_lite.dtos.VideoResponseDTO@46a62c5]]
+2025-01-12T22:24:45.445Z DEBUG 1 --- [http-nio-8089-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [univ_rouen.fr.Insta_lite.dtos.AppUserResponseDTO@50c24652]
+2025-01-12T22:24:45.445Z DEBUG 1 --- [http-nio-8089-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-12T22:24:45.445Z DEBUG 1 --- [http-nio-8089-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-12T22:24:45.454Z DEBUG 1 --- [http-nio-8089-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-01-12T22:24:45.455Z DEBUG 1 --- [http-nio-8089-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[univ_rouen.fr.Insta_lite.dtos.ImageResponseDTO@170257a3]]
+2025-01-12T22:24:45.457Z DEBUG 1 --- [http-nio-8089-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-12T22:24:45.468Z DEBUG 1 --- [http-nio-8089-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/api/videos/view/video1.mp4", parameters={}
+2025-01-12T22:24:45.469Z DEBUG 1 --- [http-nio-8089-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to univ_rouen.fr.Insta_lite.controllers.VideoController#viewVideo(String)
+2025-01-12T22:24:45.473Z DEBUG 1 --- [http-nio-8089-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Found 'Content-Type:video/mp4' in response
+2025-01-12T22:24:45.474Z DEBUG 1 --- [http-nio-8089-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[org.springframework.core.io.support.ResourceRegion@b706aee]]
+2025-01-12T22:24:45.512Z DEBUG 1 --- [http-nio-8089-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 206 PARTIAL_CONTENT
+2025-01-12T22:24:59.643Z DEBUG 1 --- [http-nio-8089-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/api/users", parameters={}
+2025-01-12T22:24:59.643Z DEBUG 1 --- [http-nio-8089-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to univ_rouen.fr.Insta_lite.controllers.UserController#getAllUsers()
+2025-01-12T22:24:59.666Z DEBUG 1 --- [http-nio-8089-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-01-12T22:24:59.666Z DEBUG 1 --- [http-nio-8089-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[univ_rouen.fr.Insta_lite.dtos.AppUserResponseDTO@908e528, univ_rouen.fr.Insta_lite.dtos.AppUserResp (truncated)...]
+2025-01-12T22:24:59.667Z DEBUG 1 --- [http-nio-8089-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-12T22:25:08.894Z DEBUG 1 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/api/users/34", parameters={}
+2025-01-12T22:25:08.895Z DEBUG 1 --- [http-nio-8089-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to univ_rouen.fr.Insta_lite.controllers.UserController#getUser(Long)
+2025-01-12T22:25:08.903Z DEBUG 1 --- [http-nio-8089-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-01-12T22:25:08.903Z DEBUG 1 --- [http-nio-8089-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [univ_rouen.fr.Insta_lite.dtos.AppUserResponseDTO@74533c6f]
+2025-01-12T22:25:08.905Z DEBUG 1 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-12T22:25:09.940Z DEBUG 1 --- [http-nio-8089-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/api/users/34", parameters={}
+2025-01-12T22:25:09.941Z DEBUG 1 --- [http-nio-8089-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to univ_rouen.fr.Insta_lite.controllers.UserController#getUser(Long)
+2025-01-12T22:25:09.946Z DEBUG 1 --- [http-nio-8089-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-01-12T22:25:09.947Z DEBUG 1 --- [http-nio-8089-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [univ_rouen.fr.Insta_lite.dtos.AppUserResponseDTO@74bb12ff]
+2025-01-12T22:25:09.948Z DEBUG 1 --- [http-nio-8089-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-12T22:25:09.951Z DEBUG 1 --- [http-nio-8089-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/api/videos/user/34", parameters={}
+2025-01-12T22:25:09.952Z DEBUG 1 --- [http-nio-8089-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to univ_rouen.fr.Insta_lite.controllers.VideoController#getVideosByUserId(Long)
+2025-01-12T22:25:09.959Z DEBUG 1 --- [http-nio-8089-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-01-12T22:25:09.960Z DEBUG 1 --- [http-nio-8089-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[univ_rouen.fr.Insta_lite.dtos.VideoResponseDTO@4ecf7a0f]]
+2025-01-12T22:25:09.961Z DEBUG 1 --- [http-nio-8089-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-12T22:25:09.965Z DEBUG 1 --- [http-nio-8089-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/api/images/user/34", parameters={}
+2025-01-12T22:25:09.966Z DEBUG 1 --- [http-nio-8089-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to univ_rouen.fr.Insta_lite.controllers.ImageController#getImagesByUserId(Long)
+2025-01-12T22:25:09.974Z DEBUG 1 --- [http-nio-8089-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-01-12T22:25:09.975Z DEBUG 1 --- [http-nio-8089-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[univ_rouen.fr.Insta_lite.dtos.ImageResponseDTO@702333e1]]
+2025-01-12T22:25:09.976Z DEBUG 1 --- [http-nio-8089-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-12T22:25:18.841Z DEBUG 1 --- [http-nio-8089-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/api/images", parameters={}
+2025-01-12T22:25:18.842Z DEBUG 1 --- [http-nio-8089-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to univ_rouen.fr.Insta_lite.controllers.ImageController#getAllImages()
+2025-01-12T22:25:18.842Z DEBUG 1 --- [http-nio-8089-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/api/videos", parameters={}
+2025-01-12T22:25:18.842Z DEBUG 1 --- [http-nio-8089-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to univ_rouen.fr.Insta_lite.controllers.VideoController#getAllVideos()
+2025-01-12T22:25:18.847Z DEBUG 1 --- [http-nio-8089-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-01-12T22:25:18.847Z DEBUG 1 --- [http-nio-8089-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-01-12T22:25:18.848Z DEBUG 1 --- [http-nio-8089-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Writing [[univ_rouen.fr.Insta_lite.dtos.VideoResponseDTO@4155e9e4]]
+2025-01-12T22:25:18.848Z DEBUG 1 --- [http-nio-8089-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[univ_rouen.fr.Insta_lite.dtos.ImageResponseDTO@5a69aff9, univ_rouen.fr.Insta_lite.dtos.ImageRespons (truncated)...]
+2025-01-12T22:25:18.849Z DEBUG 1 --- [http-nio-8089-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-12T22:25:18.849Z DEBUG 1 --- [http-nio-8089-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-12T22:25:19.241Z DEBUG 1 --- [http-nio-8089-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/api/users", parameters={}
+2025-01-12T22:25:19.242Z DEBUG 1 --- [http-nio-8089-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to univ_rouen.fr.Insta_lite.controllers.UserController#getAllUsers()
+2025-01-12T22:25:19.264Z DEBUG 1 --- [http-nio-8089-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-01-12T22:25:19.264Z DEBUG 1 --- [http-nio-8089-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[univ_rouen.fr.Insta_lite.dtos.AppUserResponseDTO@1bfe7a7d, univ_rouen.fr.Insta_lite.dtos.AppUserRes (truncated)...]
+2025-01-12T22:25:19.266Z DEBUG 1 --- [http-nio-8089-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-12T22:25:31.600Z DEBUG 1 --- [http-nio-8089-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/api/users/34", parameters={}
+2025-01-12T22:25:31.601Z DEBUG 1 --- [http-nio-8089-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to univ_rouen.fr.Insta_lite.controllers.UserController#getUser(Long)
+2025-01-12T22:25:31.606Z DEBUG 1 --- [http-nio-8089-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-01-12T22:25:31.607Z DEBUG 1 --- [http-nio-8089-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [univ_rouen.fr.Insta_lite.dtos.AppUserResponseDTO@768d04d2]
+2025-01-12T22:25:31.608Z DEBUG 1 --- [http-nio-8089-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-12T22:26:34.156Z DEBUG 1 --- [http-nio-8089-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/api/users/34", parameters={}
+2025-01-12T22:26:34.157Z DEBUG 1 --- [http-nio-8089-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to univ_rouen.fr.Insta_lite.controllers.UserController#getUser(Long)
+2025-01-12T22:26:34.162Z DEBUG 1 --- [http-nio-8089-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-01-12T22:26:34.162Z DEBUG 1 --- [http-nio-8089-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [univ_rouen.fr.Insta_lite.dtos.AppUserResponseDTO@7d4ede9e]
+2025-01-12T22:26:34.163Z DEBUG 1 --- [http-nio-8089-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-12T22:30:41.251Z  INFO 1 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-12T22:30:41.261Z  INFO 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-12T22:30:41.269Z  INFO 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
