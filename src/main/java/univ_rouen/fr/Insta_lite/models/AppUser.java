@@ -15,21 +15,20 @@ public class AppUser {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank(message = "Le nom est obligatoire.")
+    @Column(nullable = false)
     private String name;
 
-    @Email(message = "Email invalide.")
-    @NotBlank(message = "L'email est obligatoire.")
-    @Column(unique = true)
+    @Column(unique = true, nullable = false)
     private String email;
 
-    @NotBlank(message = "Le mot de passe est obligatoire.")
+    @Column(nullable = false)
     private String password;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private AppRole role;
 
+    @Column(nullable = false)
     private boolean isActive = true;
 
     @OneToMany(mappedBy = "uploadedBy", cascade = CascadeType.ALL, orphanRemoval = true)

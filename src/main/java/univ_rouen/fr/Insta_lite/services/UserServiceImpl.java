@@ -4,6 +4,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import univ_rouen.fr.Insta_lite.dtos.AppUserRequestDTO;
 import univ_rouen.fr.Insta_lite.dtos.AppUserResponseDTO;
+import univ_rouen.fr.Insta_lite.exceptions.EmailAlreadyExistsException;
 import univ_rouen.fr.Insta_lite.models.AppUser;
 import univ_rouen.fr.Insta_lite.repository.UserRepository;
 import univ_rouen.fr.Insta_lite.mapper.UserMapper;
@@ -29,8 +30,7 @@ public class UserServiceImpl implements UserService {
     public AppUserResponseDTO add(AppUserRequestDTO userDTO) {
 
         if (userRepository.findByEmail(userDTO.getEmail()).isPresent()) {
-
-            throw new IllegalArgumentException("un utilisateur existe déjà avec cet email : " + userDTO.getEmail());
+            throw new EmailAlreadyExistsException("Un utilisateur existe déjà avec cet email : " + userDTO.getEmail());
         }
             AppUser user = userMapper.toEntity(userDTO);
             user.setPassword(passwordEncoder.encode(userDTO.getPassword()));
@@ -48,6 +48,9 @@ public class UserServiceImpl implements UserService {
     @Override
     public AppUserResponseDTO update(AppUserRequestDTO userDTO, Long id) {
         AppUser user = userRepository.findById(id).orElseThrow(() -> new RuntimeException("User not found"));
+        if (userRepository.findByEmail(userDTO.getEmail()).isPresent()) {
+            throw new EmailAlreadyExistsException("Un utilisateur existe déjà avec cet email : " + userDTO.getEmail());
+        }
         userMapper.updateEntityWithDto(userDTO, user);
         if (userDTO.getPassword() != null && !userDTO.getPassword().isEmpty()) {
             user.setPassword(passwordEncoder.encode(userDTO.getPassword()));

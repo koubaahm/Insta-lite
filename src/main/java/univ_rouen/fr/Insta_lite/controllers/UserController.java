@@ -2,6 +2,7 @@ package univ_rouen.fr.Insta_lite.controllers;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
+import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -24,7 +25,7 @@ public class UserController {
     @Operation(summary = "ajout utilisateur")
     @PostMapping
     public ResponseEntity<AppUserResponseDTO> addUser(
-            @RequestBody AppUserRequestDTO userDTO) {
+            @Valid@RequestBody AppUserRequestDTO userDTO) {
         AppUserResponseDTO appUser = userService.add(userDTO);
         return ResponseEntity.ok(appUser);
     }
@@ -34,7 +35,7 @@ public class UserController {
     public ResponseEntity<AppUserResponseDTO> updateUser(
             @Parameter(description = "id l'utilisateur à mettre à jour", required = true)
             @PathVariable Long id,
-            @RequestBody AppUserRequestDTO userDTO) {
+            @Valid @RequestBody AppUserRequestDTO userDTO) {
         AppUserResponseDTO appUser = userService.update(userDTO, id);
         return ResponseEntity.ok(appUser);
     }
