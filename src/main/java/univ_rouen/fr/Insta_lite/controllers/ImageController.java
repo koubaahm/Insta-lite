@@ -75,13 +75,12 @@ public class ImageController {
     @ResponseBody
     public ResponseEntity<Resource> getImage(@PathVariable String filename) {
 
-        System.out.println("cccccccccccccccc"+filename);
         try {
             Resource resource = imageService.getImageSource(filename);
 
             Path path = resource.getFile().toPath();
             String contentType = imageService.getExtension(path);
-            System.out.println("************"+contentType);
+
             return ResponseEntity.ok()
                     .header(HttpHeaders.CONTENT_DISPOSITION, "inline; filename=\"" + filename + "\"")
                     .contentType(MediaType.parseMediaType(contentType))
@@ -121,5 +120,11 @@ public class ImageController {
         } catch (Exception e) {
             throw new RuntimeException("erreur lors du chargement de l'image: " + filename, e);
         }
+    }
+    // recuperer la liste des images d'un utilisateur
+    @GetMapping("/user/{userId}")
+    public ResponseEntity<List<ImageResponseDTO>> getImagesByUserId(@PathVariable Long userId) {
+        List<ImageResponseDTO> images = imageService.getImagesByUserId(userId);
+        return ResponseEntity.ok(images);
     }
 }

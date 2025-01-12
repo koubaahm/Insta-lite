@@ -157,6 +157,20 @@ public class ImageServiceImpl implements ImageService {
         }
         return fileName.substring(0, lastDotIndex);
     }
+    // liste des images d'un utilisateur
+    @Override
+    public List<ImageResponseDTO> getImagesByUserId(Long userId) {
+        List<Image> images = imageRepository.findByUploadedById(userId);
+
+        if (images.isEmpty()) {
+            throw new RuntimeException("aucune image trouvée pour l'utilisateur avec l'ID : " + userId);
+        }
+
+        return images.stream()
+                .map(imageMapper::convertToDto)
+                .collect(Collectors.toList());
+    }
+
 
 
 

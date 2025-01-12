@@ -19,5 +19,7 @@ public interface ImageService {
     String getExtension(Path path);
     Resource getImageSource(String filename);
     String getImageNameWithoutExtension(String fileName);
+    List<ImageResponseDTO> getImagesByUserId(Long userId);
+
 
 }
