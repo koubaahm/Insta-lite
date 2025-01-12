@@ -10,9 +10,11 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
+import univ_rouen.fr.Insta_lite.dtos.ImageResponseDTO;
 import univ_rouen.fr.Insta_lite.dtos.VideoRequestDTO;
 import univ_rouen.fr.Insta_lite.dtos.VideoResponseDTO;
 import univ_rouen.fr.Insta_lite.enumeration.Visibility;
+import univ_rouen.fr.Insta_lite.models.Video;
 import univ_rouen.fr.Insta_lite.services.VideoServiceImpl;
 
 import java.io.IOException;
@@ -120,5 +122,11 @@ public class VideoController {
         } catch (IOException e) {
             return ResponseEntity.internalServerError().build();
         }
+    }
+    // recuperer la liste des videos d'un utilisateur
+    @GetMapping("/user/{userId}")
+    public ResponseEntity<List<VideoResponseDTO>> getVideosByUserId(@PathVariable Long userId) {
+        List<VideoResponseDTO> videos = videoService.getVideosByUserId(userId);
+        return ResponseEntity.ok(videos);
     }
 }

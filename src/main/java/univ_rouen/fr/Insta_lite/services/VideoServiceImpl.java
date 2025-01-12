@@ -4,8 +4,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
+import univ_rouen.fr.Insta_lite.dtos.ImageResponseDTO;
 import univ_rouen.fr.Insta_lite.dtos.VideoRequestDTO;
 import univ_rouen.fr.Insta_lite.dtos.VideoResponseDTO;
+import univ_rouen.fr.Insta_lite.models.Image;
 import univ_rouen.fr.Insta_lite.models.Video;
 import univ_rouen.fr.Insta_lite.repository.VideoRepository;
 import univ_rouen.fr.Insta_lite.mapper.VideoMapper;
@@ -110,6 +112,20 @@ public class VideoServiceImpl implements VideoService {
             return fileName;
         }
         return fileName.substring(0, lastDotIndex);
+    }
+
+    // liste des videos d'un utilisateur
+    @Override
+    public List<VideoResponseDTO> getVideosByUserId(Long userId) {
+        List<Video> videos = videoRepository.findByUploadedById(userId);
+
+        if (videos.isEmpty()) {
+            throw new RuntimeException("aucune video trouvée pour l'utilisateur avec son id : " + userId);
+        }
+
+        return videos.stream()
+                .map(videoMapper::convertToDTO)
+                .collect(Collectors.toList());
     }
 
     public String getExtension(Path path) {

@@ -2,6 +2,7 @@ package univ_rouen.fr.Insta_lite.services;
 
 import org.springframework.web.multipart.MultipartFile;
 
+
 import univ_rouen.fr.Insta_lite.dtos.VideoRequestDTO;
 import univ_rouen.fr.Insta_lite.dtos.VideoResponseDTO;
 
@@ -15,4 +16,5 @@ public interface VideoService {
     void deleteVideoById(Long id);
 
     String getVideoNameWithoutExtension(String fileName);
+    List<VideoResponseDTO> getVideosByUserId(Long userId);
 }
