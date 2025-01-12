@@ -2,7 +2,7 @@ package univ_rouen.fr.Insta_lite.dtos;
 
 import java.time.LocalDateTime;
 
-// DTO de requête pour la création ou la mise à jour d'un commentaire
+
 public class CommentRequestDTO {
     private String content;
     private Long imageId;

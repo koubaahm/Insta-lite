@@ -86,11 +86,7 @@ public class CommentServiceImpl implements CommentService {
     @Override
     public List<CommentResponseDTO> getCommentsByImageId(Long imageId) {
         List<Comment> comments = commentRepository.findByImageId(imageId);
-
-        if (comments.isEmpty()) {
-            throw new RuntimeException("aucun commentaire pour cette image " + imageId);
-        }
-
+        
         return comments.stream()
                 .map(commentMapper::convertToDTO)
                 .collect(Collectors.toList());
@@ -99,10 +95,6 @@ public class CommentServiceImpl implements CommentService {
     @Override
     public List<CommentResponseDTO> getCommentsByVideoId(Long videoId) {
         List<Comment> comments = commentRepository.findByVideoId(videoId);
-
-        if (comments.isEmpty()) {
-            throw new RuntimeException(" aucun commentaire pour cette video  " + videoId);
-        }
 
         return comments.stream()
                 .map(commentMapper::convertToDTO)
